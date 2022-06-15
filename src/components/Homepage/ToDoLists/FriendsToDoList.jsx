@@ -1,4 +1,4 @@
-import SingleToDoComponent from "./SingleFriendsToDoComponent";
+import SingleFriendsToDoComponent from "./SingleFriendsToDoComponent";
 import "./ToDoLists.css";
 
 const FriendsToDoList = () => {
@@ -6,9 +6,9 @@ const FriendsToDoList = () => {
     <div id="FriendToDoList">
       <div className="d-flex justify-content-center">Friends to do list</div>
       <div id="checkBoxFriendsToDoContainer">
-        <SingleToDoComponent />
-        <SingleToDoComponent />
-        <SingleToDoComponent />
+        <SingleFriendsToDoComponent />
+        <SingleFriendsToDoComponent />
+        <SingleFriendsToDoComponent />
       </div>
     </div>
   );

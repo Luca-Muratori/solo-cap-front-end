@@ -1,3 +1,4 @@
+import EventsFromLikedPlacesComponent from "./EventsFromLikedPlacesComponent";
 import FriendsToDoList from "./FriendsToDoList";
 import UserToDoList from "./UserToDoList";
 
@@ -6,6 +7,7 @@ const ToDoListComponent = () => {
     <>
       {" "}
       <FriendsToDoList />
+      <EventsFromLikedPlacesComponent />
       <hr />
       <UserToDoList />
     </>

@@ -1,7 +1,7 @@
 import React from "react";
 import { MdPlaylistAdd } from "react-icons/md";
 
-const SingleToDoComponent = () => {
+const SingleFriendsToDoComponent = () => {
   return (
     <div className="singleToDoFriends">
       <div className="activityInfo">
@@ -19,4 +19,4 @@ const SingleToDoComponent = () => {
   );
 };
 
-export default SingleToDoComponent;
+export default SingleFriendsToDoComponent;

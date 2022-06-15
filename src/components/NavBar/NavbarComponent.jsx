@@ -22,6 +22,7 @@ const NavbarComponent = () => {
             <NavDropdown.Item href="#action/3.2">Blog Post</NavDropdown.Item>
             <NavDropdown.Item href="#action/3.2">Event</NavDropdown.Item>
           </NavDropdown>
+          <Nav.Link href="/placeProfile">PlaceProfile</Nav.Link>
         </Nav>
         <Form inline>
           <FormControl type="text" placeholder="Search" className="mr-sm-2" />

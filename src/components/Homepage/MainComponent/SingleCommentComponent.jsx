@@ -6,7 +6,7 @@ const SingleCommentComponent = () => {
       <div>
         <img
           className="commentUserImg"
-          alt="user"
+          alt="other-user"
           src="https://picsum.photos/200/300"
         />
       </div>

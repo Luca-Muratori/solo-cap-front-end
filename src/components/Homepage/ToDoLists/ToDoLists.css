@@ -1,5 +1,6 @@
 #FriendToDoList,
-#UserToDoList {
+#UserToDoList,
+#eventsToDoList {
     color: white;
     background-color: rgb(56, 168, 190);
     min-height: 15rem;

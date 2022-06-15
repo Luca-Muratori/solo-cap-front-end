@@ -52,3 +52,15 @@
     margin-right:.5rem;
    
 }
+
+
+.UserAddCommentInput{
+    width:100%;
+    height:5rem;
+    border-radius: .5rem;
+}
+
+.loadMoreHomePageBtn{
+    margin-top:1rem;
+    text-align:center;
+}

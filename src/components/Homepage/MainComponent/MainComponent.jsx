@@ -1,5 +1,6 @@
 import React from "react";
 import CardBlogPost from "./CardBlogPost.jsx";
+import LoadMoreButton from "./LoadMoreButton.jsx";
 import PostComponent from "./PostComponent.jsx";
 
 const MainComponent = () => {
@@ -7,6 +8,7 @@ const MainComponent = () => {
     <div className="pb-5">
       <CardBlogPost />
       <PostComponent />
+      <LoadMoreButton />
     </div>
   );
 };
