@@ -8,9 +8,10 @@ import MainComponentPlaceProfile from "./components/PlaceProfile/MainComponent/M
 function App() {
   return (
     <>
-      <NavbarComponent />
       <BrowserRouter>
+        <NavbarComponent />
         <Routes>
+          <Route path=""></Route>
           <Route path="/home" element={<HomepageComponent />}></Route>
           <Route path="userProfile"></Route>
           <Route

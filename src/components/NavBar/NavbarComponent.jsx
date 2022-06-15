@@ -11,7 +11,7 @@ import "./NavbarComponent.css";
 
 const NavbarComponent = () => {
   return (
-    <Navbar bg="light" expand="lg" className="nav">
+    <Navbar bg="light" expand="lg" className="navBar">
       <Navbar.Brand href="#home">TravelEasy</Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse className="nav">

@@ -1,4 +1,12 @@
 .nav{
     display:flex!important;
     justify-content: space-between !important;    
+   
+}
+
+.navBar{
+    margin-bottom: 10px;
+    position:fixed!important;
+    z-index:10000;
+    width:100%
 }

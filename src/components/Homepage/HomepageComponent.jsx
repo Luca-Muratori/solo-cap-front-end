@@ -6,12 +6,12 @@ import ToDoListComponent from "./ToDoLists/ToDoListComponent";
 const HomepageComponent = () => {
   return (
     <>
-      <Container style={{ marginTop: "40px" }}>
+      <Container>
         <Row>
-          <Col lg={3}>
+          <Col lg={3} style={{ marginTop: "5rem" }}>
             <ToDoListComponent />
           </Col>
-          <Col lg={9}>
+          <Col lg={9} style={{ marginTop: "5rem" }}>
             <MainComponent />
           </Col>
         </Row>
