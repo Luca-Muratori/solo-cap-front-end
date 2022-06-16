@@ -1,6 +1,6 @@
 import React from "react";
 import "./WelcomePageComponent.css";
-import { Jumbotron, Button, Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import LoginComponent from "./LoginComponent";
 import CreateAnAccount from "./CreateAnAccount";
 
