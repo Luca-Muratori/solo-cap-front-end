@@ -1,4 +1,5 @@
 import "./App.css";
+import React from "react";
 import NavbarComponent from "./components/NavBar/NavbarComponent.jsx";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
@@ -10,17 +11,18 @@ import WelcomePageComponent from "./components/WelcomePage/WelcomePageComponent"
 function App() {
   return (
     <>
-      <NavbarComponent />
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<WelcomePageComponent />}></Route>
-          <Route path="/home" element={<HomepageComponent />}></Route>
-          <Route path="/myProfile" element={<UserProfile />}></Route>
-          <Route
-            path="/placeProfile"
-            element={<MainComponentPlaceProfile />}
-          ></Route>
-          <Route path="eventProfile"></Route>
+          <Route element={<NavbarComponent />}>
+            <Route path="/home" element={<HomepageComponent />}></Route>
+            <Route path="/myProfile" element={<UserProfile />}></Route>
+            <Route
+              path="/placeProfile"
+              element={<MainComponentPlaceProfile />}
+            ></Route>
+          </Route>
+          {/* <Route path="eventProfile"></Route> */}
         </Routes>
       </BrowserRouter>
     </>
