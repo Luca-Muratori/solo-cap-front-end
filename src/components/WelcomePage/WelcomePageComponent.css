@@ -1,0 +1,44 @@
+#loginComponent{
+    background-color: aquamarine;
+   text-align: center;
+   font-size:2rem;
+    height: 100%;
+}
+
+#jumbotronTitle{
+    margin-top:4rem;
+    font-size:4rem;
+}
+
+#WelcomeLogin{
+    background-color:rgb(126, 75, 75);
+    margin-top:4rem;
+    height: 100%;
+
+}
+
+#loginCredentialTitle{
+    font-size:30px;
+    text-align:center
+}
+
+#loginCredential{
+    margin-top:3rem;
+    display:flex;
+    flex-direction:column;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.input{
+    height:3rem
+}
+
+#CreateAccountBtn{
+    width: 100%;
+    padding-top:1rem
+}
+
+
+
