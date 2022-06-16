@@ -4,10 +4,10 @@
 
 .placeProfilePic{
     width: 1.5rem;
-        height: 1.5rem;
-        object-fit: cover;
-        border-radius: 50%;
-        margin-right: 5px
+    height: 1.5rem;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 5px
 }
 
 .placeToDoListTitle{
@@ -18,14 +18,14 @@
 
 .tooltipAddIcon{
     visibility: hidden;
-        width: 120px;
-        background-color: black;
-        color: #fff;
-        text-align: center;
-        padding: 5px 0;
-        border-radius: 6px;
-        position: absolute;
-        z-index: 1;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 1;
 }
 
 .placeToDoListTitle:hover .tooltipAddIcon{
@@ -39,6 +39,8 @@
 .placeToDoAddIcon:hover{
     cursor:pointer
 }
+
+
 
 .placeToDoAddIconTooltip{
     visibility: hidden;

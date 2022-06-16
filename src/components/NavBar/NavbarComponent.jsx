@@ -28,7 +28,7 @@ const NavbarComponent = () => {
           <FormControl type="text" placeholder="Search" className="mr-sm-2" />
           <Button variant="outline-success">Search</Button>
         </Form>
-        <Nav.Link href="#link">MyProfile</Nav.Link>
+        <Nav.Link href="/myProfile">MyProfile</Nav.Link>
       </Navbar.Collapse>
     </Navbar>
   );

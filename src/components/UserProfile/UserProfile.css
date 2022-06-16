@@ -1,0 +1,107 @@
+.profilePics{
+    position:relative;
+    width:100%;
+    padding-top:3.5rem;
+}
+
+#profilePicBackground{
+    width: 100%;
+    height: 20rem;
+    object-fit: cover;
+}
+
+#profilePicInfoUserContainer{
+   border-radius:1rem;
+   object-fit:cover
+}
+
+#profilePicUser{
+    position: absolute;
+    left:7%;
+    bottom:7%;
+    width: 25%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#profilePicUser img{
+    width: 100%;
+    border-radius:1rem 0 0 1rem
+}
+
+#UserInfoContainer{
+    background-color: rgba(127, 255, 212, 0.399);
+    height:100%;
+    font-size:2.4rem;
+    padding:.8rem;
+    border-radius:0 1rem 1rem 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+#userModifyInfoIcon{
+    cursor:pointer;
+}
+
+#userModifyInfoIcon:hover{
+    background-color:rgba(127, 255, 182, 0.741);
+    border-radius:.4rem
+}
+
+
+#tooltipModifyUserInfo{
+    visibility: hidden;
+        width: 120px;
+        background-color: black;
+        color: #fff;
+        text-align: center;
+        padding: 5px 0;
+        border-radius: 6px;
+        position: absolute;
+        z-index: 1;
+}
+
+#userModifyInfoIcon:hover #tooltipModifyUserInfo{
+    visibility: visible;
+}
+
+#photoTitle{
+    font-size:40px
+}
+
+.SinglePhotoComponent{
+    width: 100%;
+}
+
+.AddAPhotoIconMyProfile{
+    font-size:40px;
+    margin-left:1rem;
+    margin-top:1rem;
+
+}
+
+.AddAPhotoIconMyProfile:hover{
+    background-color:rgba(86, 244, 86, 0.781);
+    border-radius: .5rem;
+    cursor:pointer
+}
+
+.tooltipMyProfile{
+    position: relative;
+        display: inline-block;
+}
+
+.tooltipText{
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    z-index: 1;
+}
+
+.tooltipMyProfile:hover .tooltipText{
+    visibility: visible
+}
