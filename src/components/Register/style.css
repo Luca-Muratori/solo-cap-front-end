@@ -1,0 +1,14 @@
+#registerComponent{
+    margin-top: 30px;
+    margin-left:auto;
+    margin-right:auto;
+    width: 50%;
+    height: 500px
+
+}
+
+#registerButton{
+   display:'flex';
+   align-items: center;
+   font-size:20px
+}

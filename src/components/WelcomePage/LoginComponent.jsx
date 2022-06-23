@@ -1,7 +1,7 @@
 import { Button } from "react-bootstrap";
 import React from "react";
 import "./WelcomePageComponent.css";
-
+import { Link } from "react-router-dom";
 const LoginComponent = () => {
   return (
     <div id="WelcomeLogin">
@@ -17,7 +17,9 @@ const LoginComponent = () => {
           type="password"
           placeholder="insert your password"
         />
-        <Button className="mt-1">Log in </Button>
+        <Link to="/home">
+          <Button className="mt-1">Log in </Button>
+        </Link>
       </div>
     </div>
   );

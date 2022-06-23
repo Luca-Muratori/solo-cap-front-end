@@ -7,6 +7,7 @@ import HomepageComponent from "./components/Homepage/HomepageComponent.jsx";
 import MainComponentPlaceProfile from "./components/PlaceProfile/MainComponent/MainComponentPlaceProfile";
 import UserProfile from "./components/UserProfile/UserProfile.jsx";
 import WelcomePageComponent from "./components/WelcomePage/WelcomePageComponent";
+import RegisterComponent from "./components/Register/RegisterComponent";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<WelcomePageComponent />}></Route>
+          <Route path="/register" element={<RegisterComponent />}></Route>
           <Route element={<NavbarComponent />}>
             <Route path="/home" element={<HomepageComponent />}></Route>
             <Route path="/myProfile" element={<UserProfile />}></Route>
