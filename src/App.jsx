@@ -8,25 +8,29 @@ import MainComponentPlaceProfile from "./components/PlaceProfile/MainComponent/M
 import UserProfile from "./components/UserProfile/UserProfile.jsx";
 import WelcomePageComponent from "./components/WelcomePage/WelcomePageComponent";
 import RegisterComponent from "./components/Register/RegisterComponent";
+import { Provider } from "react-redux";
+import configureStore from "./app/store";
 
 function App() {
   return (
     <>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<WelcomePageComponent />}></Route>
-          <Route path="/register" element={<RegisterComponent />}></Route>
-          <Route element={<NavbarComponent />}>
-            <Route path="/home" element={<HomepageComponent />}></Route>
-            <Route path="/myProfile" element={<UserProfile />}></Route>
-            <Route
-              path="/placeProfile"
-              element={<MainComponentPlaceProfile />}
-            ></Route>
-          </Route>
-          {/* <Route path="eventProfile"></Route> */}
-        </Routes>
-      </BrowserRouter>
+      <Provider store={configureStore}>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<WelcomePageComponent />}></Route>
+            <Route path="/register" element={<RegisterComponent />}></Route>
+            <Route element={<NavbarComponent />}>
+              <Route path="/home" element={<HomepageComponent />}></Route>
+              <Route path="/myProfile" element={<UserProfile />}></Route>
+              <Route
+                path="/placeProfile"
+                element={<MainComponentPlaceProfile />}
+              ></Route>
+            </Route>
+            {/* <Route path="eventProfile"></Route> */}
+          </Routes>
+        </BrowserRouter>
+      </Provider>
     </>
   );
 }
