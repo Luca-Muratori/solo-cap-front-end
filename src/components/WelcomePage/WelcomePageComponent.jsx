@@ -18,6 +18,7 @@ const WelcomePageComponent = () => {
           </Col>
           <Col lg={4}>
             <LoginComponent />
+
             <CreateAnAccount />
           </Col>
         </Row>
