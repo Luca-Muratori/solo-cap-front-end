@@ -1,7 +1,7 @@
 import { Form } from "react-bootstrap";
 import React from "react";
 import "./WelcomePageComponent.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import GoogleLogin from "./GoggleLogin";
@@ -9,6 +9,8 @@ import GoogleLogin from "./GoggleLogin";
 const LoginComponent = () => {
   const phoneNumber = useSelector((state) => state.user.phoneNumber);
   const dispatch = useDispatch();
+
+  let navigate = useNavigate();
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -37,7 +39,7 @@ const LoginComponent = () => {
     console.log(response);
     if (response.status === 200) {
       const data = await response.json();
-      window.location.href = "/home";
+      navigate("/home");
       console.log(data);
       localStorage.setItem("token", data.accessToken);
     } else {
