@@ -9,9 +9,23 @@ import UserProfile from "./components/UserProfile/UserProfile.jsx";
 import WelcomePageComponent from "./components/WelcomePage/WelcomePageComponent";
 import RegisterComponent from "./components/Register/RegisterComponent";
 import { Provider } from "react-redux";
-import configureStore from "./app/store";
+import configureStore from "./redux/store";
+import { useEffect, useState } from "react";
 
 function App() {
+  const [tokenInLocalStorage, setTokenInLocalStorage] = useState(null);
+  const token = new URLSearchParams(window.location.search).get("accessToken");
+
+  // console.log(token);
+  // localStorage.setItem("token", token);
+  useEffect(() => {
+    if (token) {
+      localStorage.setItem("accessToken", token);
+      setTokenInLocalStorage(token);
+    } else {
+      setTokenInLocalStorage(null);
+    }
+  }, []);
   return (
     <>
       <Provider store={configureStore}>

@@ -1,9 +1,12 @@
 import React from "react";
 import { Container, Col, Row } from "react-bootstrap";
+import { useSearchParams } from "react-router-dom";
 import MainComponent from "./MainComponent/MainComponent";
 import ToDoListComponent from "./ToDoLists/ToDoListComponent";
 
 const HomepageComponent = () => {
+  console.log("token", localStorage.getItem("accessToken"));
+
   return (
     <>
       <Container>
