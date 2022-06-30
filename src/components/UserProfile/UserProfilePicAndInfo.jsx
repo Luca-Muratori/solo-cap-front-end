@@ -3,7 +3,7 @@ import UserInfo from "./UserInfo";
 import "./UserProfile.css";
 import { Container, Row, Col } from "react-bootstrap";
 
-const UserProfilePic = () => {
+const UserProfilePic = ({ user }) => {
   return (
     <div className="profilePics">
       <img
@@ -15,11 +15,11 @@ const UserProfilePic = () => {
         <Row>
           <Col className="pr-0" lg={3}>
             {" "}
-            <img alt="user" src="https://picsum.photos/100/100" />
+            <img alt="user" src={user.avatar} />
           </Col>
           <Col className="pl-0" lg={5}>
             {" "}
-            <UserInfo />
+            <UserInfo user={user} />
           </Col>
         </Row>
       </Container>

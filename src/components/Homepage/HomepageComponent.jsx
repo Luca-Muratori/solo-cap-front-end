@@ -5,7 +5,7 @@ import MainComponent from "./MainComponent/MainComponent";
 import ToDoListComponent from "./ToDoLists/ToDoListComponent";
 
 const HomepageComponent = () => {
-  console.log("token", localStorage.getItem("accessToken"));
+  console.log("token", localStorage.getItem("token"));
 
   return (
     <>

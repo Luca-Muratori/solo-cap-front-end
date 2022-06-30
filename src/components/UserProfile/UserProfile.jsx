@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import UserProfilePicAndInfo from "./UserProfilePicAndInfo.jsx";
 import { Container, Row, Col } from "react-bootstrap";
 import UserToDoList from "../Homepage/ToDoLists/UserToDoList.jsx";
@@ -9,9 +9,10 @@ import { useSelector } from "react-redux";
 import { setLoggedUser } from "../../redux/actions.js";
 
 const UserProfile = () => {
-  const user = useSelector((state) => state.user);
+  const [user, setUser] = useState({});
+  // const user = useSelector((state) => state.user);
+  // console.log("state user", user);
   const token = localStorage.getItem("token");
-  console.log("state user", user);
 
   useEffect(() => {
     loadUserInfo();
@@ -27,14 +28,14 @@ const UserProfile = () => {
     });
     if (response.ok) {
       const data = await response.json();
-      
+      setUser(data);
+      console.log(data);
     }
   };
 
-  console.log(user);
   return (
     <div>
-      <UserProfilePicAndInfo />
+      <UserProfilePicAndInfo user={user} />
       <Container fluid className="mt-5">
         <Row>
           <Col lg={2}>
