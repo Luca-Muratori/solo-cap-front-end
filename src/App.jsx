@@ -32,7 +32,7 @@ function App() {
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<WelcomePageComponent />}></Route>
-            <Route path="/register" element={<RegisterComponent />}></Route>
+            <Route path="/registration" element={<RegisterComponent />}></Route>
             <Route element={<NavbarComponent />}>
               <Route path="/home" element={<HomepageComponent />}></Route>
               <Route path="/myProfile" element={<UserProfile />}></Route>

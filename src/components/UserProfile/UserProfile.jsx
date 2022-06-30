@@ -27,7 +27,7 @@ const UserProfile = () => {
     });
     if (response.ok) {
       const data = await response.json();
-      let user = await data;
+      
     }
   };
 

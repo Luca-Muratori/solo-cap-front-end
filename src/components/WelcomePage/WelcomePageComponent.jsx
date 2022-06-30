@@ -1,6 +1,7 @@
 import React from "react";
 import "./WelcomePageComponent.css";
 import { Container, Row, Col } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import LoginComponent from "./LoginComponent";
 import CreateAnAccount from "./CreateAnAccount";
 
@@ -19,7 +20,9 @@ const WelcomePageComponent = () => {
           <Col lg={4}>
             <LoginComponent />
 
-            <CreateAnAccount />
+            <Link to="/registration">
+              <CreateAnAccount />
+            </Link>
           </Col>
         </Row>
       </Container>

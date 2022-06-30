@@ -15,9 +15,9 @@ const LoginComponent = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleRegister = (e) => {
-    window.location.href = "/register";
-  };
+  // const handleRegister = (e) => {
+  //   window.location.href = "/register";
+  // };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
