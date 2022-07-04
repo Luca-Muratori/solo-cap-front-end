@@ -17,7 +17,10 @@ const UserProfile = () => {
 
   const [show, setShow] = useState(false);
 
-  const handleClose = () => setShow(false);
+  const handleClose = () => {
+    setShow(false);
+    window.location.reload();
+  };
   const handleShow = () => setShow(true);
 
   useEffect(() => {
@@ -65,7 +68,7 @@ const UserProfile = () => {
               </div>
             </div>
 
-            <PhotosComponent />
+            <PhotosComponent user={user} />
           </Col>
         </Row>
       </Container>
