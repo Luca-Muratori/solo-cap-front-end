@@ -38,7 +38,7 @@ const UserProfile = () => {
     if (response.ok) {
       const data = await response.json();
       setUser(data);
-      console.log(data);
+      console.log(user);
     }
   };
 
@@ -48,8 +48,7 @@ const UserProfile = () => {
       <Container fluid className="mt-5">
         <Row>
           <Col lg={2}>
-            <UserToDoList />
-            <EventsFromLikedPlacesComponent />
+            <UserToDoList user={user} />
           </Col>
           <Col lg={10}>
             <div className="d-flex ">

@@ -21,13 +21,11 @@ const LoginComponent = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(process.env.REACT_APP_URL);
 
     let body = {
       email: email,
       password: password,
     };
-    console.log(body);
     const response = await fetch(process.env.REACT_APP_URL + "/user/login ", {
       method: "POST",
       headers: {
@@ -36,7 +34,6 @@ const LoginComponent = () => {
       },
       body: JSON.stringify(body),
     });
-    console.log(response);
     if (response.status === 200) {
       const data = await response.json();
       navigate("/home");
