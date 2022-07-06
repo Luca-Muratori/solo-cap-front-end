@@ -39,6 +39,14 @@
     justify-content: space-between;
 }
 
+#otherUserInfoContainer{
+    background-color: rgba(127, 255, 212, 0.399);
+    height: 100%;
+    font-size:4.4rem;
+    padding: 3.8rem;
+    display: flex;
+}
+
 #userModifyInfoIcon{
     cursor:pointer;
 }

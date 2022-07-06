@@ -11,6 +11,7 @@ import RegisterComponent from "./components/Register/RegisterComponent";
 import { Provider } from "react-redux";
 import configureStore from "./redux/store";
 import { useEffect, useState } from "react";
+import UsersProfileFromSearch from "./components/UserProfile/UsersProfileFromSearch";
 
 function App() {
   const [tokenInLocalStorage, setTokenInLocalStorage] = useState(null);
@@ -36,6 +37,10 @@ function App() {
             <Route element={<NavbarComponent />}>
               <Route path="/home" element={<HomepageComponent />}></Route>
               <Route path="/myProfile" element={<UserProfile />}></Route>
+              <Route
+                path="/user/:userId"
+                element={<UsersProfileFromSearch />}
+              ></Route>
               <Route
                 path="/placeProfile"
                 element={<MainComponentPlaceProfile />}

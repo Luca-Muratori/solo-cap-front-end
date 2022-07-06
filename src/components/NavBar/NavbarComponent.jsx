@@ -10,7 +10,7 @@ import {
   Col,
 } from "react-bootstrap";
 import "./NavbarComponent.css";
-import { Outlet } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import { useState } from "react";
 import { useEffect } from "react";
 
@@ -68,7 +68,7 @@ const NavbarComponent = () => {
                   {users
                     .filter((user) => user.email.toLowerCase().includes(query))
                     .map((user) => (
-                      <>
+                      <Link to={`/user/${user._id}`}>
                         <Col lg={2}>
                           <img
                             alt="userAvatar"
@@ -83,7 +83,7 @@ const NavbarComponent = () => {
                           {user.email}
                         </Col>
                         <hr style={{ color: "black" }} />
-                      </>
+                      </Link>
                     ))}
                 </Row>
               </Container>
