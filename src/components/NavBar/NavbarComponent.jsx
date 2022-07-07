@@ -68,22 +68,30 @@ const NavbarComponent = () => {
                   {users
                     .filter((user) => user.email.toLowerCase().includes(query))
                     .map((user) => (
-                      <Link to={`/user/${user._id}`}>
+                      <>
                         <Col lg={2}>
-                          <img
-                            alt="userAvatar"
-                            className="avatarSearchQuery"
-                            src={user.avatar}
-                          />
+                          <a href={`/user/${user._id}`}>
+                            <img
+                              alt="userAvatar"
+                              className="avatarSearchQuery"
+                              src={user.avatar}
+                            />
+                          </a>
                         </Col>
                         <Col
                           lg={10}
                           style={{ marginTop: "1rem", paddingLeft: "0px" }}
                         >
-                          {user.email}
+                          <a
+                            className="searchResult"
+                            href={`/user/${user._id}`}
+                          >
+                            {" "}
+                            {user.email}
+                          </a>
                         </Col>
                         <hr style={{ color: "black" }} />
-                      </Link>
+                      </>
                     ))}
                 </Row>
               </Container>

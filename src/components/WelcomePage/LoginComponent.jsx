@@ -1,4 +1,4 @@
-import { Form } from "react-bootstrap";
+import { Form, Button } from "react-bootstrap";
 import React from "react";
 import "./WelcomePageComponent.css";
 import { Link, useNavigate } from "react-router-dom";
@@ -49,7 +49,7 @@ const LoginComponent = () => {
       <div id="WelcomeLogin">
         <div id="loginCredentialTitle">Insert your credentials</div>
         <div id="loginCredential">
-          <Form onSubmit={handleSubmit}>
+          <Form className="d-flex flex-column " onSubmit={handleSubmit}>
             <input
               type="email"
               value={email}
@@ -58,18 +58,19 @@ const LoginComponent = () => {
               className="mb-3 input"
             />
             <input
+              placeholder="insert your password"
               className="input"
               type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
-            <button type="submit" className="mt-1">
+            <Button id="buttonLogin" type="submit" className="mt-3">
               Log in{" "}
-            </button>
+            </Button>
           </Form>
+          <GoogleLogin />
         </div>
       </div>
-      <GoogleLogin />
     </div>
   );
 };

@@ -1,3 +1,10 @@
+
+
+#bgImg{
+    background: linear-gradient(88deg, rgba(232, 171, 35, 0.9632586310891544) 36%, rgba(239, 240, 244, 0.6859477067194065) 62%, rgba(6, 149, 251, 0.386) 98%);
+    height:36rem
+}
+
 #loginComponent{
     background-color: aquamarine;
    text-align: center;
@@ -5,28 +12,61 @@
     height: 100%;
 }
 
+#imgWelcome{
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    image-rendering: auto;
+}
+
+#containerWelcome{
+    position:relative;
+}
+
 #jumbotronTitle{
+    text-align: center;
     margin-top:4rem;
-    font-size:4rem;
+    font-size:6rem;
+    font-family: 'Teko', sans-serif;
+    font-weight: 900;
+    background-color: rgba(255, 255, 255, 0.620);
+    border-radius: .5rem
+}
+
+#jumbotronaDescription{
+    margin-top:2rem;
+    font-size:1.5rem;
+    text-align:center;
+    background-color: rgba(255,
+        255,
+        255, 0.620);
+    border-radius: .5rem
 }
 
 #WelcomeLogin{
-    background-color:rgb(126, 75, 75);
+background: linear-gradient(90deg, rgba(252, 252, 252, 0.27698412128523286) 7%, rgba(255, 255, 255, 0.5991129728258491) 58%);
     margin-top:4rem;
     height: 100%;
+    border-radius: 1rem;
 
+}
+
+input{
+    border-radius:.3rem
 }
 
 #loginCredentialTitle{
     font-size:30px;
-    text-align:center
+    text-align:center;
+    font-family: 'Teko', sans-serif;
 }
 
 #loginCredential{
     margin-top:3rem;
     display:flex;
     flex-direction:column;
-    width: 60%;
+    width: 50%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -41,4 +81,26 @@
 }
 
 
+#buttonLogin{
+    text-align: center;
+    background-color:rgba(53, 176, 230, 0.925)!important
+}
 
+#googleLogin{
+    background-color:rgba(221, 231, 239, 0.875);
+    margin-top:.7rem;
+    margin-bottom:1rem;
+    border-radius:.5rem
+    
+}
+
+
+#googleRedirect{
+    text-decoration: none;
+    color: rgb(0, 0, 0)
+}
+
+#goggleIcon{
+    font-size:50px;
+    margin-right:10px;
+}

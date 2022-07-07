@@ -6,7 +6,11 @@ const CreateAnAccount = () => {
   return (
     <Link to="/registration">
       <div id="CreateAccountBtn">
-        <Button className="w-100" variant="success">
+        <Button
+          style={{ fontSize: "20px" }}
+          className="w-100"
+          variant="success"
+        >
           Create an account
         </Button>
       </div>

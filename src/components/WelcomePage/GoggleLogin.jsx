@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate, useParams } from "react-router-dom";
+import { FcGoogle } from "react-icons/fc";
 
 const GoggleLogin = () => {
   const navigate = useNavigate();
@@ -31,12 +32,16 @@ const GoggleLogin = () => {
     // }
   };
   return (
-    <a
-      onClick={handleGoogleLogin}
-      href={`${process.env.REACT_APP_URL}/user/googleLogin`}
-    >
-      Google
-    </a>
+    <div id="googleLogin">
+      <a
+        id="googleRedirect"
+        onClick={handleGoogleLogin}
+        href={`${process.env.REACT_APP_URL}/user/googleLogin`}
+      >
+        <FcGoogle id="goggleIcon" />
+        Continue with google
+      </a>
+    </div>
   );
 };
 
