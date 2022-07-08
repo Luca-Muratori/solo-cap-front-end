@@ -1,7 +1,6 @@
 
 
 #bgImg{
-    background: linear-gradient(88deg, rgba(232, 171, 35, 0.9632586310891544) 36%, rgba(239, 240, 244, 0.6859477067194065) 62%, rgba(6, 149, 251, 0.386) 98%);
     height:36rem
 }
 
@@ -57,9 +56,9 @@ input{
 }
 
 #loginCredentialTitle{
-    font-size:30px;
+    font-size:40px;
     text-align:center;
-    font-family: 'Teko', sans-serif;
+    font-weight: bold;
 }
 
 #loginCredential{
@@ -83,7 +82,12 @@ input{
 
 #buttonLogin{
     text-align: center;
-    background-color:rgba(53, 176, 230, 0.925)!important
+    background-color:rgba(53, 176, 230, 0.925)!important;
+    height:8.33vh
+}
+
+#buttonLogin:hover{
+    background-color:rgb(0, 110, 255)!important
 }
 
 #googleLogin{
@@ -94,6 +98,10 @@ input{
     
 }
 
+
+#googleLogin:hover{
+    background-color:white;
+}
 
 #googleRedirect{
     text-decoration: none;

@@ -8,27 +8,30 @@ import CreateAnAccount from "./CreateAnAccount";
 const WelcomePageComponent = () => {
   return (
     <div id="bgImg">
-      <img
-        id="imgWelcome"
-        alt="welcome"
-        src="https://res.cloudinary.com/dar1jmjxk/image/upload/v1657197644/photos/p1ktit78zmmf0fupk7fb.png"
-      />
-      <Container id="containerWelcome">
+      <Container fluid id="containerWelcome">
         <Row>
-          <Col sm={0} lg={7}>
-            <h1 id="jumbotronTitle">Welcome to TravelEasy</h1>
-
-            <p id="jumbotronaDescription">
-              In this site you will see all the place of the world, see what
-              your friends have planned, and create your own to do list
-            </p>
-          </Col>
-          <Col sm={12} lg={5}>
+          <Col
+            sm={12}
+            lg={6}
+            style={{ backgroundColor: "orange", maxHeight: "100vh" }}
+          >
             <LoginComponent />
 
             <Link to="/registration">
               <CreateAnAccount />
             </Link>
+          </Col>
+          <Col className="px-0" sm={0}>
+            <img
+              style={{
+                width: "100%",
+                objectFit: "cover",
+                overflow: "hidden",
+                maxHeight: "100vh",
+              }}
+              alt="welcome"
+              src="https://picsum.photos/2000/3000"
+            />
           </Col>
         </Row>
       </Container>

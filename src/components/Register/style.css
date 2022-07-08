@@ -1,14 +1,33 @@
 #registerComponent{
     margin-top: 30px;
+    margin-bottom:30px;
     margin-left:auto;
     margin-right:auto;
     width: 50%;
-    height: 500px
+    height: 100%;
+    background-color: rgba(240, 255, 255, 0.526);
+    border-radius: .3rem
 
 }
 
 #registerButton{
    display:'flex';
    align-items: center;
-   font-size:20px
+   font-size:20px;
+   width:73%
 }
+
+
+#registrationBg{
+    background-image:url('https://i0.wp.com/post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/08/GettyImages-1150512077_header-1024x575.jpg?w=1155&h=1528');
+    max-height: 100vh;
+    background-repeat:no-repeat;
+    background-size: cover;
+    overflow:hidden
+}
+
+.input{
+    width: 100%;
+    border: 1px solid rgb(0, 166, 255)
+}
+

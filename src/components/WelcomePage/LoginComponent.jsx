@@ -47,7 +47,8 @@ const LoginComponent = () => {
   return (
     <div>
       <div id="WelcomeLogin">
-        <div id="loginCredentialTitle">Insert your credentials</div>
+        <div id="loginCredentialTitle">Welcome to TravelEasy</div>
+        <p>Add your photo and look what your friends are planning to do </p>
         <div id="loginCredential">
           <Form className="d-flex flex-column " onSubmit={handleSubmit}>
             <input

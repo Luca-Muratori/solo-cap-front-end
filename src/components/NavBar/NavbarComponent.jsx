@@ -69,7 +69,7 @@ const NavbarComponent = () => {
                     .filter((user) => user.email.toLowerCase().includes(query))
                     .map((user) => (
                       <>
-                        <Col lg={2}>
+                        <Col xs={2} sm={2} lg={2}>
                           <a href={`/user/${user._id}`}>
                             <img
                               alt="userAvatar"
@@ -79,6 +79,8 @@ const NavbarComponent = () => {
                           </a>
                         </Col>
                         <Col
+                          xs={10}
+                          sm={10}
                           lg={10}
                           style={{ marginTop: "1rem", paddingLeft: "0px" }}
                         >
