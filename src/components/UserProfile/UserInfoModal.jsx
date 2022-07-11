@@ -3,17 +3,18 @@ import { Modal, Button, Form } from "react-bootstrap";
 
 const UserInfoModal = ({ show, handleClose, user }) => {
   let profile = user;
+
   const [profileDetails, setProfileDetails] = useState({
     name: profile.name,
     surname: profile.surname,
     email: profile.email,
     avatar: profile.avatar,
   });
-  const handleChangeInfo = (profileDetails) => {
-    updateProfile(profileDetails);
+  const handleChangeInfo = () => {
+    updateProfile();
     handleClose();
   };
-  const updateProfile = async (profile) => {
+  const updateProfile = async () => {
     console.log(profile);
     let res = await fetch("https://solo-capstone.herokuapp.com/user/me", {
       method: "PUT",
@@ -23,31 +24,9 @@ const UserInfoModal = ({ show, handleClose, user }) => {
         Authorization: "Bearer " + localStorage.getItem("token"),
       },
     });
+    console.log("res from put", res);
     if (res.ok) {
       alert("updated");
-      uploadAvatar();
-    }
-  };
-
-  const uploadAvatar = async (profile) => {
-    try {
-      const data = new FormData();
-      data.append("avatar", user.avatar);
-      const response = await fetch(
-        `https://solo-capstone.herokuapp.com/user/${profile._id}/uploadAvatar`,
-        {
-          method: "PUT",
-          body: data,
-        }
-      );
-      if (response.ok) {
-        console.log("Image Successfully Uploaded");
-        handleClose();
-      } else {
-        console.error("image uploading failed");
-      }
-    } catch (error) {
-      console.error(error);
     }
   };
 
@@ -105,23 +84,6 @@ const UserInfoModal = ({ show, handleClose, user }) => {
                 setProfileDetails({
                   ...profileDetails,
                   email: e.target.value,
-                })
-              }
-            />
-          </Form.Group>
-
-          {/* IMAGE  */}
-          <Form.Group>
-            <Form.Label>Your avatar</Form.Label>
-            <Form.Control
-              type="file"
-              placeholder="Write here"
-              className="mt-1"
-              defaultValue={profileDetails.avatar}
-              onChange={(e) =>
-                setProfileDetails({
-                  ...profileDetails,
-                  avatar: e.target.value,
                 })
               }
             />

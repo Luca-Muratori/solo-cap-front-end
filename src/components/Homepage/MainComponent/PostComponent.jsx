@@ -1,28 +1,32 @@
 import { FaHeart } from "react-icons/fa";
 import CommentComponent from "./CommentComponent";
-const PostComponent = () => {
+import { Link } from "react-router-dom";
+
+const PostComponent = ({ photo }) => {
   return (
     <div className="postComponent">
       <div className="d-flex">
         <div>
-          <img
-            className="userImg"
-            alt="user-img"
-            src="https://picsum.photos/200/300"
-          />
-        </div>
-        <div>
-          <b>User name</b>
+          <Link
+            style={{ textDecoration: "none", color: "black" }}
+            to={`/user/${photo.userId[0]._id}`}
+          >
+            <img
+              className="userImg"
+              alt="user-img"
+              src={photo.userId[0].avatar}
+            />
+
+            <b style={{ fontSize: "20px", marginTop: "40px" }}>
+              {photo.userId[0].name} {photo.userId[0].surname}
+            </b>
+          </Link>
         </div>
       </div>
       <div id="ImgContainer">
-        <img
-          className="postImg"
-          alt="post"
-          src="https://picsum.photos/100/100"
-        />
+        <img className="postImg" alt="post" src={photo.cloudinaryLink} />
       </div>
-      <div id="heartIcon">
+      {/* <div id="heartIcon">
         <FaHeart />
       </div>
       <div>
@@ -34,7 +38,7 @@ const PostComponent = () => {
         adipiscing lorem ipsum dolor sit amet, consectetur adipiscing
       </div>
       <hr />
-      <CommentComponent />
+      <CommentComponent /> */}
       {/* add a comment */}
     </div>
   );

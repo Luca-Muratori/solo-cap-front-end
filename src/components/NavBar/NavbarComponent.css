@@ -9,7 +9,9 @@
     margin-bottom: 10px;
     position:fixed!important;
     z-index:10000;
-    width:100%
+    width:100%;
+    padding-top: 0px!important;
+    padding-bottom: 0px!important;
 }
 
 .searchQuery{
@@ -35,3 +37,6 @@
     color:black!important;
 }
 
+.inputSearchNav{
+    border-radius:1rem
+}

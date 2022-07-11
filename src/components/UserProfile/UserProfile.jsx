@@ -38,7 +38,6 @@ const UserProfile = () => {
     if (response.ok) {
       const data = await response.json();
       setUser(data);
-      console.log(user);
     }
   };
 

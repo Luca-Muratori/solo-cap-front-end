@@ -135,3 +135,15 @@
     opacity: 1;
     cursor:pointer
 }
+
+#modifyPic{
+    visibility:hidden
+}
+
+#modifyPic:hover{
+    visibility:visible!important
+}
+
+#avatarImg:hover{
+    cursor:pointer
+}

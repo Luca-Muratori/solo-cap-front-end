@@ -5,19 +5,27 @@ import UserToDoListAddButton from "./UserToDoListAddButton";
 
 const UserToDoList = ({ user }) => {
   const [toDos, setToDos] = useState([]);
+  console.log("user", user._id);
+
   useEffect(() => {
-    if (user) {
-      getToDos(user);
-    }
-  }, []);
+    getToDos(user);
+  }, [user]);
 
   const getToDos = async (user) => {
     const response = await fetch(
-      process.env.REACT_APP_URL + "/user/" + user._id + "/toDos"
+      process.env.REACT_APP_URL + "/user/" + user._id + "/toDos",
+      {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
     );
     if (response.ok) {
       let data = await response.json();
+      console.log("data", data);
       setToDos(data);
+    } else {
+      console.log("something went wrong");
     }
   };
 
@@ -35,9 +43,18 @@ const UserToDoList = ({ user }) => {
 
       <div id="checkBoxUserToDoContainer">
         {toDos &&
-          toDos.map((toDo) => (
-            <SingleUserToDoComponent key={toDo._id} toDo={toDo} />
-          ))}
+          toDos
+            .map((toDo) => (
+              <>
+                <SingleUserToDoComponent
+                  key={toDo._id}
+                  user={user}
+                  toDo={toDo}
+                />
+                <hr style={{ width: "80%" }} />
+              </>
+            ))
+            .reverse()}
       </div>
     </div>
   );

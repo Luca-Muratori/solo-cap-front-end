@@ -7,12 +7,10 @@ const PhotosComponent = ({ user }) => {
 
   useEffect(() => {
     getPhotos(user);
-    console.log(user);
   }, [user]);
 
   const getPhotos = async (user) => {
     try {
-      console.log("user", user);
       if (user) {
         let response = await fetch(
           process.env.REACT_APP_URL + "/user/" + user._id + "/photos",

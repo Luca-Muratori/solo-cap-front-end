@@ -21,6 +21,7 @@ const SinglePhotoComponent = ({ cloudinaryLink, photo, user }) => {
   return (
     <div className="mt-2">
       <img
+        key={photo._id}
         className="SinglePhotoComponent"
         alt="uploaded"
         src={cloudinaryLink}

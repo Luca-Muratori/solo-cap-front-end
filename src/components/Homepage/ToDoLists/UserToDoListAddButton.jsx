@@ -12,7 +12,9 @@ const UserToDoListAddButton = ({ user }) => {
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
   const submitToDo = async () => {
+    console.log("to do", toDo);
     try {
       let response = await fetch(
         process.env.REACT_APP_URL + "/user/" + user._id + "/toDos",
