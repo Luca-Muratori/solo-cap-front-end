@@ -7,7 +7,6 @@ const ToDoListComponent = () => {
     <>
       {" "}
       <FriendsToDoList />
-      <EventsFromLikedPlacesComponent />
       <hr />
       <UserToDoList />
     </>

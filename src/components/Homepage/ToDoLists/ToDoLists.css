@@ -1,9 +1,10 @@
 #FriendToDoList,
 #UserToDoList,
 #eventsToDoList {
-    color: white;
-    background-color: rgb(56, 168, 190);
+    color: black;
+    background-color: rgba(218, 225, 226, 0.816);
     min-height: 15rem;
+    border-radius:1rem
 }
 
 #checkBoxFriendsToDoContainer,
@@ -40,7 +41,7 @@
 }
 
 .activityDescription {
-    font-size: 18px;
+    font-size: 16px;
     margin-bottom: 0px
 }
 
@@ -99,4 +100,12 @@
 
 #userToDoAddIcon:hover .tooltipAddIcon{
     visibility: visible;
+}
+
+.toDoWhere{
+    font-size:12px
+}
+
+.addToYourList:hover{
+    cursor: pointer;
 }

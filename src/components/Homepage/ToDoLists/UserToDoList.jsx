@@ -5,7 +5,6 @@ import UserToDoListAddButton from "./UserToDoListAddButton";
 
 const UserToDoList = ({ user }) => {
   const [toDos, setToDos] = useState([]);
-  console.log("user", user._id);
 
   useEffect(() => {
     getToDos(user);
