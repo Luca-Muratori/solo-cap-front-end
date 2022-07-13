@@ -4,25 +4,24 @@ import SingleUserToDoComponent from "./SingleUserToDoComponent";
 import UserToDoListAddButton from "./UserToDoListAddButton";
 
 const UserToDoList = ({ user }) => {
-  const [toDos, setToDos] = useState([]);
+  const [me, setMe] = useState([]);
+
+  const token = localStorage.getItem("token");
 
   useEffect(() => {
-    getToDos(user);
-  }, [user]);
+    getMe();
+  }, []);
 
-  const getToDos = async (user) => {
-    const response = await fetch(
-      process.env.REACT_APP_URL + "/user/" + user._id + "/toDos",
-      {
-        headers: {
-          "Content-Type": "application/json",
-        },
-      }
-    );
+  const getMe = async () => {
+    const response = await fetch(process.env.REACT_APP_URL + "/user/me", {
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: "Bearer " + token,
+      },
+    });
     if (response.ok) {
       let data = await response.json();
-      console.log("data", data);
-      setToDos(data);
+      setMe(data);
     } else {
       console.log("something went wrong");
     }
@@ -31,7 +30,16 @@ const UserToDoList = ({ user }) => {
   return (
     <div id="UserToDoList">
       <div id="userToDoListHeader">
-        <div className="d-flex justify-content-center">My to do list</div>{" "}
+        <div
+          className="d-flex justify-content-center"
+          style={{
+            fontFamily: "Teko, sans-serif",
+            fontWeight: "800",
+            marginTop: "10px",
+          }}
+        >
+          My to do list
+        </div>{" "}
         <div id="userToDoAddIcon">
           <UserToDoListAddButton user={user} />
           <span className="tooltipAddIcon">
@@ -41,19 +49,19 @@ const UserToDoList = ({ user }) => {
       </div>
 
       <div id="checkBoxUserToDoContainer">
-        {toDos &&
-          toDos
+        {me.userToDoList ? (
+          me &&
+          me.userToDoList
             .map((toDo) => (
               <>
-                <SingleUserToDoComponent
-                  key={toDo._id}
-                  user={user}
-                  toDo={toDo}
-                />
+                <SingleUserToDoComponent key={toDo._id} user={me} toDo={toDo} />
                 <hr style={{ width: "80%" }} />
               </>
             ))
-            .reverse()}
+            .reverse()
+        ) : (
+          <></>
+        )}
       </div>
     </div>
   );

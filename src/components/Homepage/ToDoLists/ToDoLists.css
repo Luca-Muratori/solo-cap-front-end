@@ -12,6 +12,16 @@
     margin-top: 1rem;
 }
 
+.row1{
+    border-bottom: 1px solid rgba(206, 199, 199, 0.819);
+    margin-bottom:15px  ;
+   
+}
+
+.row1:last-child {
+    border-bottom:none
+}
+
 .checkBoxUserToDoList {
     margin-bottom: 1rem
 }
@@ -37,7 +47,9 @@
 
 .activityInfo {
     display:flex;
-    align-items:baseline
+    align-items:baseline;
+    flex-direction: column;
+    padding-left:5px
 }
 
 .activityDescription {
@@ -84,6 +96,10 @@
 
 #addToDoUser{
     margin-left:1rem
+}
+
+#userToDoAddIcon{
+    margin-top: 10px;
 }
 
 #userToDoAddIcon .tooltipAddIcon {

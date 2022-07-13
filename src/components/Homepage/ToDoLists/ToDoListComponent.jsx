@@ -5,9 +5,8 @@ import UserToDoList from "./UserToDoList";
 const ToDoListComponent = () => {
   return (
     <>
-      {" "}
       <FriendsToDoList />
-      <hr />
+      <div style={{ marginTop: "20px" }} />
       <UserToDoList />
     </>
   );

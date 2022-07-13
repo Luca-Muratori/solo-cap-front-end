@@ -1,15 +1,40 @@
-import { FaHeart } from "react-icons/fa";
-import CommentComponent from "./CommentComponent";
 import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
 
 const PostComponent = ({ photo }) => {
+  const [me, setMe] = useState([]);
+
+  const token = localStorage.getItem("token");
+
+  useEffect(() => {
+    getMe();
+  }, []);
+
+  const getMe = async () => {
+    const response = await fetch(process.env.REACT_APP_URL + "/user/me", {
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: "Bearer " + token,
+      },
+    });
+    if (response.ok) {
+      let data = await response.json();
+      setMe(data);
+    } else {
+      console.log("something went wrong");
+    }
+  };
   return (
     <div className="postComponent">
       <div className="d-flex">
         <div>
           <Link
             style={{ textDecoration: "none", color: "black" }}
-            to={`/user/${photo.userId[0]._id}`}
+            to={
+              me._id === photo.userId[0]._id
+                ? `/myProfile`
+                : `/user/${photo.userId[0]._id}`
+            }
           >
             <img
               className="userImg"

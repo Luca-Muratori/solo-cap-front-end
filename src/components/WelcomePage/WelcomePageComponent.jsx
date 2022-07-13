@@ -10,18 +10,14 @@ const WelcomePageComponent = () => {
     <div id="bgImg">
       <Container fluid id="containerWelcome">
         <Row>
-          <Col
-            sm={12}
-            lg={6}
-            style={{ backgroundColor: "orange", maxHeight: "100vh" }}
-          >
+          <Col sm={12} lg={4} style={{ maxHeight: "100vh" }}>
             <LoginComponent />
 
             <Link to="/registration">
               <CreateAnAccount />
             </Link>
           </Col>
-          <Col className="px-0" sm={0}>
+          <Col className="px-0" sm={0} style={{ order: "-1" }}>
             <img
               style={{
                 width: "100%",

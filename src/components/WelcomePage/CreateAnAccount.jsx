@@ -4,17 +4,12 @@ import { Link } from "react-router-dom";
 
 const CreateAnAccount = () => {
   return (
-    <Link to="/registration">
-      <div id="CreateAccountBtn">
-        <Button
-          style={{ fontSize: "20px" }}
-          className="w-100"
-          variant="success"
-        >
-          Create an account
-        </Button>
-      </div>
-    </Link>
+    <div style={{ color: "black" }}>
+      Not registered?
+      <Link id="CreateAccountBtn" to="/registration">
+        {"  "} Sign up
+      </Link>
+    </div>
   );
 };
 

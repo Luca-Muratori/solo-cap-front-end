@@ -27,7 +27,11 @@ const FriendsToDoList = () => {
     <div id="FriendToDoList">
       <div
         className="d-flex justify-content-center"
-        style={{ fontSize: "20px", fontWeight: "bold" }}
+        style={{
+          fontFamily: "Teko, sans-serif",
+          fontWeight: "800",
+          paddingTop: "10px",
+        }}
       >
         Friends to do list
       </div>
@@ -35,8 +39,7 @@ const FriendsToDoList = () => {
         {toDos &&
           toDos.map((toDo) => (
             <>
-              <SingleFriendsToDoComponent toDo={toDo} />{" "}
-              <hr style={{ width: "80%" }} />
+              <SingleFriendsToDoComponent key={toDo._id} t toDo={toDo} />{" "}
             </>
           ))}
       </div>

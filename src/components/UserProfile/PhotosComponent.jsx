@@ -37,7 +37,7 @@ const PhotosComponent = ({ user }) => {
         {photos &&
           photos.map((photo) => {
             return (
-              <Col className="p-0 pr-2 " lg={4}>
+              <Col className="p-0 pr-2 " lg={6}>
                 <SinglePhotoComponent
                   key={photo._id}
                   cloudinaryLink={photo.cloudinaryLink}

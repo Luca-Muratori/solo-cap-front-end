@@ -48,7 +48,9 @@ const LoginComponent = () => {
     <div>
       <div id="WelcomeLogin">
         <div id="loginCredentialTitle">Welcome to TravelEasy</div>
-        <p>Add your photo and look what your friends are planning to do </p>
+        <p style={{ textAlign: "center" }}>
+          Add your photo and look what your friends are planning to do{" "}
+        </p>
         <div id="loginCredential">
           <Form className="d-flex flex-column " onSubmit={handleSubmit}>
             <input

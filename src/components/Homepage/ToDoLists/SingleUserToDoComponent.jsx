@@ -19,9 +19,14 @@ const SingleUserToDoComponent = ({ toDo, user }) => {
 
   return (
     <div key={toDo._id} className="checkBoxUserToDoList">
-      <Form.Check type="checkbox" onClick={handleDelete} />
+      <Form.Check
+        type="checkbox"
+        style={{ paddingLeft: "25px", paddingRight: "15px" }}
+        onClick={handleDelete}
+      />
       <div className="activityInfo">
         <p className="activityDescription">{toDo.title}</p>
+        <p className="toDoWhere">{toDo.where}</p>
       </div>
     </div>
   );
