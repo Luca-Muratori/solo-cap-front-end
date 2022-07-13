@@ -65,10 +65,13 @@ const SingleFriendsToDoComponent = ({ toDo }) => {
               </Col>
               <Col lg={2}>
                 <div className="addToYourList">
-                  <MdPlaylistAdd onClick={handleClick} />
-                  <span className="tooltipAddIcon">
-                    Add to your to do list
-                  </span>{" "}
+                  <img
+                    style={{ width: "150%" }}
+                    alt="addIcon"
+                    src="https://img.icons8.com/stickers/100/000000/add-property.png"
+                    onClick={handleClick}
+                  />
+                  <span className="tooltipAddIcon">Add to your to do list</span>{" "}
                 </div>
               </Col>{" "}
             </Row>

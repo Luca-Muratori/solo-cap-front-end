@@ -60,11 +60,7 @@ const NavbarComponent = () => {
   };
   return (
     <>
-      <Navbar
-        bg="light"
-        expand="lg"
-        className="navBar d-flex justify-content-between"
-      >
+      <Navbar expand="lg" className="navBar d-flex justify-content-between">
         <Navbar.Brand href="/home">
           <img
             style={{ width: "40%" }}

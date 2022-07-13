@@ -31,7 +31,7 @@ const UserToDoList = ({ user }) => {
     <div id="UserToDoList">
       <div id="userToDoListHeader">
         <div
-          className="d-flex justify-content-center"
+          className=""
           style={{
             fontFamily: "Teko, sans-serif",
             fontWeight: "800",

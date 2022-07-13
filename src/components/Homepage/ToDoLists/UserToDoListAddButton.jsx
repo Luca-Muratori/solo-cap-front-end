@@ -40,10 +40,14 @@ const UserToDoListAddButton = ({ user }) => {
   return (
     <>
       <div id="addToDoUser" variant="primary" onClick={handleShow}>
-        <BsPatchPlus />
+        <img
+          style={{ width: "35%" }}
+          alt="addToDo"
+          src="https://img.icons8.com/stickers/100/000000/add-property.png"
+        />
       </div>
 
-      <Modal show={show} onHide={handleClose}>
+      <Modal style={{ marginTop: "52px" }} show={show} onHide={handleClose}>
         <Modal.Header closeButton>
           <Modal.Title>Add a to do</Modal.Title>
         </Modal.Header>
