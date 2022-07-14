@@ -52,7 +52,11 @@ const LoginComponent = () => {
           Add your photo and look what your friends are planning to do{" "}
         </p>
         <div id="loginCredential">
-          <Form className="d-flex flex-column " onSubmit={handleSubmit}>
+          <Form
+            className="d-flex flex-column "
+            style={{ width: "80%", margin: "auto" }}
+            onSubmit={handleSubmit}
+          >
             <input
               type="email"
               value={email}

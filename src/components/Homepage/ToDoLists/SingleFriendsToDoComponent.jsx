@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 const SingleFriendsToDoComponent = ({ toDo }) => {
   const [click, setClick] = useState(false);
   const [userMe, setUserMe] = useState([]);
-  const [userMeToDoList, setUserMeToDoList] = useState(null);
 
   const token = localStorage.getItem("token");
 
@@ -17,10 +16,7 @@ const SingleFriendsToDoComponent = ({ toDo }) => {
   const handleClick = () => {
     setClick(!click);
     if (click === true) {
-      console.log(userMe);
-      userMeToDoList.push(toDo);
-      console.log("---------------");
-      console.log("after the push", userMeToDoList);
+      addToDo(toDo);
     }
   };
 
@@ -35,17 +31,41 @@ const SingleFriendsToDoComponent = ({ toDo }) => {
     if (response.ok) {
       const data = await response.json();
       setUserMe(data);
-      setUserMeToDoList(userMe.userToDoList);
     }
   };
 
   //with this function I want to add a to do when the user click on the icon in the my friend component
+  const addToDo = async (toDo) => {
+    delete toDo._id;
+    delete toDo.__v;
+    delete toDo.userId[0];
 
-  const addToDoToUserMeList = () => {};
+    try {
+      let response = await fetch(
+        process.env.REACT_APP_URL + "/user/" + userMe._id + "/toDos",
+        {
+          method: "POST",
+          body: JSON.stringify({ ...toDo, userId: [userMe] }),
+          headers: {
+            "Content-type": "application/json",
+            Authorization: "Bearer " + localStorage.getItem("token"),
+          },
+        }
+      );
+      if (response.ok) {
+        window.location.reload();
+        // handleClose();
+      } else {
+        console.log("1", response);
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   return (
     <>
-      {userMe._id === toDo.userId[0]._id ? (
+      {userMe._id === toDo.userId[0]?._id ? (
         <></>
       ) : (
         <>

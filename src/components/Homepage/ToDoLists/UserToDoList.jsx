@@ -3,7 +3,7 @@ import "./ToDoLists.css";
 import SingleUserToDoComponent from "./SingleUserToDoComponent";
 import UserToDoListAddButton from "./UserToDoListAddButton";
 
-const UserToDoList = ({ user }) => {
+const UserToDoList = () => {
   const [me, setMe] = useState([]);
 
   const token = localStorage.getItem("token");
@@ -41,7 +41,7 @@ const UserToDoList = ({ user }) => {
           My to do list
         </div>{" "}
         <div id="userToDoAddIcon">
-          <UserToDoListAddButton user={user} />
+          <UserToDoListAddButton user={me} />
           <span className="tooltipAddIcon">
             Create a new to do for your adventure
           </span>
