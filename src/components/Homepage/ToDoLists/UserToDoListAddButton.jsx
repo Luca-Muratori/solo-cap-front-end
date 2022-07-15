@@ -39,7 +39,7 @@ const UserToDoListAddButton = ({ user }) => {
 
   return (
     <>
-      <div id="addToDoUser" variant="primary" onClick={handleShow}>
+      <div id="addToDoUser" onClick={handleShow}>
         <img
           style={{ width: "35%" }}
           alt="addToDo"

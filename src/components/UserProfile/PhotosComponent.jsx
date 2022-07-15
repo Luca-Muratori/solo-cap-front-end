@@ -33,11 +33,14 @@ const PhotosComponent = ({ user }) => {
 
   return (
     <Container className="mt-1">
-      <Row>
+      <Row className="row-cols-lg-4">
         {photos &&
           photos.map((photo) => {
             return (
-              <Col className="p-0 pr-2 " lg={6}>
+              <Col
+                className="p-0 pr-2 "
+                style={{ width: "100%", height: "100%" }}
+              >
                 <SinglePhotoComponent
                   key={photo._id}
                   cloudinaryLink={photo.cloudinaryLink}

@@ -46,10 +46,10 @@ const UserProfile = () => {
       <UserProfilePicAndInfo user={user} />
       <Container fluid className="mt-5">
         <Row>
-          <Col lg={2}>
+          <Col lg={3}>
             <UserToDoList user={user} />
           </Col>
-          <Col lg={10}>
+          <Col lg={9}>
             <div className="d-flex ">
               <div id="photoTitle">Look at your photo</div>
               <div className="tooltipMyProfile">

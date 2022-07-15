@@ -19,7 +19,7 @@
 .userImg{
     width: 4rem;
     object-fit: cover;
-    border-radius: 20%;
+    border-radius: 50%;
     margin-right: .5rem;
 }
 

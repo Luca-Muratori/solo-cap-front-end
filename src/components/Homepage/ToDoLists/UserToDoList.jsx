@@ -53,10 +53,9 @@ const UserToDoList = () => {
           me &&
           me.userToDoList
             .map((toDo) => (
-              <>
+              <div className="singleToDo">
                 <SingleUserToDoComponent key={toDo._id} user={me} toDo={toDo} />
-                <hr style={{ width: "80%" }} />
-              </>
+              </div>
             ))
             .reverse()
         ) : (

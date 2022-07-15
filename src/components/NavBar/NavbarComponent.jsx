@@ -131,7 +131,7 @@ const NavbarComponent = () => {
             >
               <img
                 alt="user"
-                style={{ maxWidth: "80%", borderRadius: ".7rem" }}
+                style={{ maxWidth: "80%", borderRadius: "2rem" }}
                 src={user.avatar}
               />
             </Nav.Link>

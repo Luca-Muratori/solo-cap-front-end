@@ -78,17 +78,17 @@ const SingleFriendsToDoComponent = ({ toDo }) => {
                   </p>
                 </Link>
               </Col>
-              <Col lg={8}>
+              <Col lg={6}>
                 {" "}
                 <p className="activityDescription">{toDo.title}</p>
                 <p className="toDoWhere">{toDo.where}</p>
               </Col>
-              <Col lg={2}>
+              <Col lg={3}>
                 <div className="addToYourList">
                   <img
                     style={{ width: "150%" }}
                     alt="addIcon"
-                    src="https://img.icons8.com/stickers/100/000000/add-property.png"
+                    src="https://img.icons8.com/clouds/100/000000/plus.png"
                     onClick={handleClick}
                   />
                   <span className="tooltipAddIcon">Add to your to do list</span>{" "}

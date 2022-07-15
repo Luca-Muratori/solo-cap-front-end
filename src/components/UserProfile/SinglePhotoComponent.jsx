@@ -19,13 +19,8 @@ const SinglePhotoComponent = ({ cloudinaryLink, photo, user }) => {
   };
 
   return (
-    <div className="mt-2">
-      <img
-        key={photo._id}
-        className="SinglePhotoComponent"
-        alt="uploaded"
-        src={cloudinaryLink}
-      />
+    <div className="mt-2 SinglePhotoComponent">
+      <img key={photo._id} alt="uploaded" src={cloudinaryLink} />
       <MdDeleteForever onClick={handleDelete} className="deleteImgIcon" />
     </div>
   );
