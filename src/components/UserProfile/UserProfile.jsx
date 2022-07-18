@@ -44,16 +44,28 @@ const UserProfile = () => {
   return (
     <div>
       <UserProfilePicAndInfo user={user} />
-      <Container fluid className="mt-5">
+      <Container fluid className="mt-3">
         <Row>
           <Col lg={3}>
             <UserToDoList user={user} />
           </Col>
-          <Col lg={9}>
+          <Col
+            lg={9}
+            style={{
+              marginBottom: "10px",
+              backgroundColor: "white",
+              maxWidth: "70%",
+              boxShadow:
+                "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)",
+              borderRadius: "1rem",
+            }}
+          >
             <div className="d-flex ">
               <div id="photoTitle">Look at your photo</div>
               <div className="tooltipMyProfile">
-                <MdAddAPhoto
+                <img
+                  src="https://img.icons8.com/cute-clipart/64/000000/add-image.png"
+                  alt="add"
                   onClick={handleShow}
                   className="AddAPhotoIconMyProfile"
                 />

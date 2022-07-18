@@ -35,17 +35,23 @@ const UsersProfileFromSearch = () => {
   return (
     <div>
       <OtherUserInfo otherUser={otherUser} />
-      <Container fluid className="mt-5">
+      <Container fluid>
         <Row>
-          <Col lg={2}>
+          <Col lg={3}>
             <OtherUserToDoList user={otherUser} />
           </Col>
-          <Col lg={10}>
+          <Col
+            lg={9}
+            style={{
+              backgroundColor: "white",
+              maxWidth: "70% ",
+              borderRadius: "1rem",
+              boxShadow:
+                "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)",
+            }}
+          >
             <div className="d-flex ">
-              <div id="photoTitle">Look at your photo</div>
-              <div className="tooltipMyProfile">
-                <span className="tooltipText">Add a photo in your profile</span>
-              </div>
+              <div id="photoTitle">Look at the photos</div>
             </div>
             <PhotosComponent user={otherUser} />
           </Col>

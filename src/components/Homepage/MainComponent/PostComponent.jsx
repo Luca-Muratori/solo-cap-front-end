@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 const PostComponent = ({ photo }) => {
   const [me, setMe] = useState([]);
 
-  const token = localStorage.getItem("token");
+  const token = localStorage.getItem("token" || "accessToken");
 
   useEffect(() => {
     getMe();

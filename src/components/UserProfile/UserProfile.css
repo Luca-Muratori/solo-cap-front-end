@@ -1,7 +1,7 @@
 .profilePics{
     position:relative;
     width:100%;
-    padding-top:3.5rem;
+    padding-top:4.5rem;
 }
 
 #profilePicBackground{
@@ -16,46 +16,45 @@
 }
 
 #profilePicUser{
-    position: absolute;
-    left:7%;
-    bottom:7%;
-    width: 25%;
-    width: 100%;
-    object-fit: cover;
+   
 }
 
 #profilePicUser img{
-    width: 100%;
-    border-radius:1rem 0 0 1rem
+    width:75%;
+    border-radius:8rem
 }
 
 #UserInfoContainer{
-    background-color: rgba(127, 255, 212, 0.399);
+    background-color: rgba(255, 255, 255);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+            0 6px 20px 0 rgba(0, 0, 0, 0.19);
     height:100%;
-    font-size:2.4rem;
     padding:.8rem;
-    border-radius:0 1rem 1rem 0;
+    border-radius:1rem 1rem 1rem 1rem;
     display: flex;
     justify-content: space-between;
+    flex-direction: row-reverse ;
 }
 
 #otherUserInfoContainer{
-    background-color: rgba(127, 255, 212, 0.399);
-    height: 100%;
     font-size:4.4rem;
-    padding: 3.8rem;
+    padding: 3.8rem 0rem 1rem 3.8rem;
     display: flex;
 }
 
 #userModifyInfoIcon{
     cursor:pointer;
+    width:1rem
 }
 
 #userModifyInfoIcon:hover{
-    background-color:rgba(127, 255, 182, 0.741);
+    background-color:rgba(211, 214, 213, 0.826);
     border-radius:.4rem
 }
 
+#col3{
+    max-width: 20%!important;
+}
 
 #tooltipModifyUserInfo{
     visibility: hidden;
@@ -74,7 +73,7 @@
 }
 
 #photoTitle{
-    font-size:40px;
+    font-size:30px;
     font-family: 'Teko', sans-serif;
     font-weight: 800;
 
@@ -93,14 +92,14 @@
 }
 
 .AddAPhotoIconMyProfile{
-    font-size:40px;
+    width:2rem;
     margin-left:1rem;
     margin-top:1rem;
 
 }
 
 .AddAPhotoIconMyProfile:hover{
-    background-color:rgba(86, 244, 86, 0.781);
+    background-color:rgba(216, 216, 216, 0.781);
     border-radius: .5rem;
     cursor:pointer
 }
@@ -155,4 +154,11 @@
 
 #avatarImg:hover{
     cursor:pointer
+}
+
+.otherUserInfo{
+    font-size: 40px;
+    font-family: Teko, sans-serif;
+    font-weight: 800;
+    display:flex;
 }

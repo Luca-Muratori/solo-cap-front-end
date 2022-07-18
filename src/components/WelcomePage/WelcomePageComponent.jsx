@@ -26,7 +26,7 @@ const WelcomePageComponent = () => {
                 maxHeight: "100vh",
               }}
               alt="welcome"
-              src="https://picsum.photos/2000/3000"
+              src="https://picsum.photos/200/300"
             />
           </Col>
         </Row>

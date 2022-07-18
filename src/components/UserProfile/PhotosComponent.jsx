@@ -32,7 +32,7 @@ const PhotosComponent = ({ user }) => {
   };
 
   return (
-    <Container className="mt-1">
+    <Container className="mt-2 mb-3">
       <Row className="row-cols-lg-4">
         {photos &&
           photos.map((photo) => {

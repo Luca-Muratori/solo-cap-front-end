@@ -34,14 +34,9 @@ const UserProfilePic = ({ user }) => {
 
   return (
     <div className="profilePics">
-      <img
-        id="profilePicBackground"
-        alt="background"
-        src="https://picsum.photos/200/300"
-      />
       <Container id="profilePicUser">
         <Row>
-          <Col className="pr-0" lg={3}>
+          <Col className="pr-0" lg={3} id="col3">
             {" "}
             <img alt="user" onClick={handleShow} src={user.avatar} />
             {/* Modal to change the avatar */}{" "}
