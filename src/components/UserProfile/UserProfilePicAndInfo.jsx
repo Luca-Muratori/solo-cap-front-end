@@ -35,8 +35,8 @@ const UserProfilePic = ({ user }) => {
   return (
     <div className="profilePics">
       <Container id="profilePicUser">
-        <Row>
-          <Col className="pr-0" lg={3} id="col3">
+        <Row id="">
+          <Col className="pr-0" lg={3} id="">
             {" "}
             <img alt="user" onClick={handleShow} src={user.avatar} />
             {/* Modal to change the avatar */}{" "}

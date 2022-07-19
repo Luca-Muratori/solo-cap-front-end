@@ -36,7 +36,7 @@ const UsersProfileFromSearch = () => {
     <div>
       <OtherUserInfo otherUser={otherUser} />
       <Container fluid>
-        <Row>
+        <Row style={{ paddingInline: "6rem" }}>
           <Col lg={3}>
             <OtherUserToDoList user={otherUser} />
           </Col>
@@ -46,8 +46,6 @@ const UsersProfileFromSearch = () => {
               backgroundColor: "white",
               maxWidth: "70% ",
               borderRadius: "1rem",
-              boxShadow:
-                "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)",
             }}
           >
             <div className="d-flex ">

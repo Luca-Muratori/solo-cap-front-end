@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import OtherUserSingleToDo from "../Homepage/ToDoLists/OtherUserSingleToDo";
-import SingleUserToDoComponent from "../Homepage/ToDoLists/SingleUserToDoComponent";
 
 const OtherUserToDoList = ({ user }) => {
   const [toDos, setToDos] = useState([]);
@@ -9,7 +8,7 @@ const OtherUserToDoList = ({ user }) => {
     if (user) {
       getToDos(user);
     }
-  }, []);
+  }, [user]);
 
   const getToDos = async (user) => {
     const response = await fetch(

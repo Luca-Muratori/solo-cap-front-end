@@ -15,19 +15,23 @@
    object-fit:cover
 }
 
-#profilePicUser{
-   
+#rowProfileUser{
+    margin-left:6rem!important
 }
+
+
 
 #profilePicUser img{
     width:75%;
     border-radius:8rem
 }
 
+#profilePicUser .row {
+    margin-left:2rem!important
+}
+
 #UserInfoContainer{
-    background-color: rgba(255, 255, 255);
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
-            0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: rgba(199, 237, 230);
     height:100%;
     padding:.8rem;
     border-radius:1rem 1rem 1rem 1rem;
@@ -73,7 +77,8 @@
 }
 
 #photoTitle{
-    font-size:30px;
+    font-size:20px;
+    margin-top:.5rem;
     font-family: 'Teko', sans-serif;
     font-weight: 800;
 
@@ -94,7 +99,7 @@
 .AddAPhotoIconMyProfile{
     width:2rem;
     margin-left:1rem;
-    margin-top:1rem;
+    margin-top:.5rem;
 
 }
 
