@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Button, Modal, Form } from "react-bootstrap";
-import { BsPatchPlus } from "react-icons/bs";
+import { BsJournalPlus } from "react-icons/bs";
 
 const UserToDoListAddButton = ({ user }) => {
   const [show, setShow] = useState(false);
@@ -40,11 +40,7 @@ const UserToDoListAddButton = ({ user }) => {
   return (
     <>
       <div id="addToDoUser" onClick={handleShow}>
-        <img
-          style={{ width: "35%" }}
-          alt="addToDo"
-          src="https://img.icons8.com/stickers/100/000000/add-property.png"
-        />
+        <BsJournalPlus />
       </div>
 
       <Modal style={{ marginTop: "52px" }} show={show} onHide={handleClose}>

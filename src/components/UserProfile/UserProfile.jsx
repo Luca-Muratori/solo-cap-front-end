@@ -14,6 +14,7 @@ const UserProfile = () => {
   // const user = useSelector((state) => state.user);
   // console.log("state user", user);
   const token = localStorage.getItem("token");
+  const accessToken = localStorage.getItem("accessToken");
 
   const [show, setShow] = useState(false);
 
@@ -32,12 +33,15 @@ const UserProfile = () => {
       method: "GET",
       headers: {
         "Content-type": "application/json",
-        Authorization: "Bearer " + token,
+        Authorization: "Bearer " + token || accessToken,
       },
     });
     if (response.ok) {
       const data = await response.json();
       setUser(data);
+    } else {
+      console.log(token);
+      console.log(accessToken);
     }
   };
 
@@ -46,19 +50,11 @@ const UserProfile = () => {
       <UserProfilePicAndInfo user={user} />
       <Container fluid className="mt-3">
         <Row id="rowProfileUser">
-          <Col lg={3}>
+          <Col lg={3} sm={12} id="toDoContainerForResponsiveness">
             <UserToDoList user={user} />
           </Col>
-          <Col
-            lg={9}
-            style={{
-              marginBottom: "10px",
-              backgroundColor: "white",
-              maxWidth: "70%",
-              borderRadius: "1rem",
-            }}
-          >
-            <div className="d-flex ">
+          <Col id="containerPhoto" lg={9} sm={12} style={{}}>
+            <div className="photoTitleResponsiveness d-flex ">
               <div id="photoTitle">Look at your photo</div>
               <div className="tooltipMyProfile">
                 <img

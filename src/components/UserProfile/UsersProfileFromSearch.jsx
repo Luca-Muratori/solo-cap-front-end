@@ -35,23 +35,29 @@ const UsersProfileFromSearch = () => {
   return (
     <div>
       <OtherUserInfo otherUser={otherUser} />
-      <Container fluid>
-        <Row style={{ paddingInline: "6rem" }}>
-          <Col lg={3}>
+      <Container
+        className="containerOtherUserToDoPhoto"
+        fluid
+        style={{ paddingInline: "6rem" }}
+      >
+        <Row>
+          <Col lg={3} sm={12}>
             <OtherUserToDoList user={otherUser} />
           </Col>
-          <Col
-            lg={9}
-            style={{
-              backgroundColor: "white",
-              maxWidth: "70% ",
-              borderRadius: "1rem",
-            }}
-          >
-            <div className="d-flex ">
-              <div id="photoTitle">Look at the photos</div>
+          <Col lg={9} sm={12}>
+            <div
+              id="photoComponentOtherUser"
+              style={{
+                backgroundColor: "white",
+                maxWidth: "70% ",
+                borderRadius: "1rem",
+              }}
+            >
+              <div className="d-flex ">
+                <div id="photoTitle">Look at the photos</div>
+              </div>
+              <PhotosComponent user={otherUser} />
             </div>
-            <PhotosComponent user={otherUser} />
           </Col>
         </Row>
       </Container>

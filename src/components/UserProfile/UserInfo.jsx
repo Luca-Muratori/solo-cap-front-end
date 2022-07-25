@@ -16,7 +16,7 @@ const UserInfo = ({ user }) => {
   return (
     <div>
       {user.name && user.surname ? (
-        <div style={{ marginLeft: "20px" }}>
+        <div className="userInfo" style={{ marginLeft: "20px" }}>
           <div
             style={{
               fontSize: "40px",

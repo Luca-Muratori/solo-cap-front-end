@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { MdPlaylistAdd } from "react-icons/md";
 import { Link } from "react-router-dom";
+import { BsFillPlusCircleFill } from "react-icons/bs";
 
 const SingleFriendsToDoComponent = ({ toDo }) => {
   const [click, setClick] = useState(false);
@@ -71,27 +72,24 @@ const SingleFriendsToDoComponent = ({ toDo }) => {
         <>
           <Container className="row1">
             <Row>
-              <Col lg={2}>
+              <Col lg={2} className="userPicToDo">
                 <Link to={`/user/${toDo.userId[0]._id} `}>
                   <p className="friendToDoInfo">
                     <img alt="friend profile " src={toDo.userId[0].avatar} />{" "}
                   </p>
                 </Link>
               </Col>
-              <Col lg={6}>
+              <Col lg={6} className="toDoBody">
                 {" "}
                 <p className="activityDescription">{toDo.title}</p>
                 <p className="toDoWhere">{toDo.where}</p>
               </Col>
-              <Col lg={3}>
+              <Col lg={3} className="addIconToDoResponsiveness">
                 <div className="addToYourList">
-                  <img
-                    style={{ width: "150%" }}
-                    alt="addIcon"
-                    src="https://img.icons8.com/clouds/100/000000/plus.png"
-                    onClick={handleClick}
-                  />
-                  <span className="tooltipAddIcon">Add to your to do list</span>{" "}
+                  <BsFillPlusCircleFill className="add" onClick={handleClick} />
+                  <span className="tooltipAddIcon">
+                    Add to your to do list
+                  </span>{" "}
                 </div>
               </Col>{" "}
             </Row>

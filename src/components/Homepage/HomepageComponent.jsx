@@ -23,12 +23,12 @@ const HomepageComponent = () => {
 
   return (
     <>
-      <Container fluid>
-        <Row style={{ paddingInline: "6rem" }}>
-          <Col lg={3} style={{ marginTop: "5rem" }}>
+      <Container className="homepage">
+        <Row>
+          <Col sm={12} lg={3} style={{ marginTop: "5rem" }}>
             <ToDoListComponent />
           </Col>
-          <Col lg={9} style={{ marginTop: "4rem" }}>
+          <Col sm={12} lg={9} style={{ marginTop: "4rem" }}>
             <MainComponent />
           </Col>
         </Row>

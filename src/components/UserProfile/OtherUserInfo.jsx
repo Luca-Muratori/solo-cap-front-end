@@ -12,14 +12,19 @@ const OtherUserInfo = ({ otherUser }) => {
     <div id="otherUserInfoContainer">
       <Container>
         <Row>
-          <Col lg={3} className="pr-0" style={{ maxWidth: "20%" }}>
+          <Col
+            lg={3}
+            sm={12}
+            className="pr-0 otherUserAvatar"
+            style={{ maxWidth: "20%" }}
+          >
             <img
               style={{ borderRadius: "50%", width: "70%", height: "100%" }}
               alt="user"
               src={otherUser.avatar}
             />
           </Col>
-          <Col className="pl-0" lg={5}>
+          <Col className="pl-0" lg={5} sm={12}>
             <div className="otherUserInfo">
               <div style={{ marginRight: "10px" }}>{otherUser.name}</div>
               <div>{otherUser.surname}</div>

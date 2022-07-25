@@ -136,10 +136,10 @@
 
 .deleteImgIcon{
     opacity: 0;
+    color:red!important;
     position:absolute;
-    background-color:greenyellow;
     font-size:30px;
-    left:85%;
+    left:70%;
     top:5%;
     border-radius:50%
 }
@@ -166,4 +166,94 @@
     font-family: Teko, sans-serif;
     font-weight: 800;
     display:flex;
+}
+
+.avatarProfileMe:hover{
+ cursor:pointer
+}
+
+
+.imgModal{
+    width: 80vh;
+}
+
+.modal-dialog{
+    margin-top:4.75rem !important
+}
+
+@media (max-width: 412px){
+    .userInfo, #rowProfileUser{ 
+        margin-left :0px!important;
+    }
+
+    #containerPhoto{
+        max-width: 95%!important;
+        margin-top:1rem
+    }
+
+    #toDoContainerForResponsiveness{
+        padding-left:0px
+    }
+
+    #profilePicUser .row{
+        margin-left:0px!important
+    }
+
+    .tooltipMyProfile{
+        width:48px;
+        height:39px;
+    }
+
+    .AddAPhotoIconMyProfile{
+        margin-left:.7rem
+    }
+
+    .photoTitleResponsiveness{
+        justify-content:space-between   
+    }
+
+   .imgModal{
+    width:39vh
+   }
+
+   .otherUserAvatar{
+    max-width: 100%!important;
+
+   }
+
+   .otherUserInfo{
+    font-size:32px
+   }
+
+   #otherUserInfoContainer{
+    padding-left:15px!important
+   }
+
+   .containerOtherUserToDoPhoto{
+    padding-inline:0rem!important;
+    padding-left:15px!important;
+   }
+
+   #UserToDoList{
+    width:96%!important
+   }
+
+   #photoComponentOtherUser{
+    max-width: 96%!important;
+    margin-top:10px
+   }
+
+   #photoTitle{
+    margin-left:10px
+   }
+
+  
+}
+
+
+#containerPhoto{
+    margin-bottom: 10px;
+    background-color: white;
+    max-width: 70%;
+    border-radius: 1rem;
 }

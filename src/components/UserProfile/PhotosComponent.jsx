@@ -33,11 +33,12 @@ const PhotosComponent = ({ user }) => {
 
   return (
     <Container className="mt-2 mb-3">
-      <Row className="row-cols-lg-4">
+      <Row className=" row-cols-lg-4 ">
         {photos &&
           photos.map((photo) => {
             return (
               <Col
+                sm={12}
                 className="p-0 pr-2 "
                 style={{ width: "100%", height: "100%" }}
               >

@@ -35,13 +35,18 @@ const UserProfilePic = ({ user }) => {
   return (
     <div className="profilePics">
       <Container id="profilePicUser">
-        <Row id="">
+        <Row id="profileNumberPhotoTodo">
           <Col className="pr-0" lg={3} id="">
             {" "}
-            <img alt="user" onClick={handleShow} src={user.avatar} />
+            <img
+              alt="user"
+              className="avatarProfileMe"
+              onClick={handleShow}
+              src={user.avatar}
+            />
             {/* Modal to change the avatar */}{" "}
             <>
-              <Modal show={show} onHide={handleClose}>
+              <Modal className="mt-5" show={show} onHide={handleClose}>
                 <Modal.Header closeButton>
                   <Modal.Title>Modal heading</Modal.Title>
                 </Modal.Header>
@@ -64,7 +69,7 @@ const UserProfilePic = ({ user }) => {
               </Modal>
             </>
           </Col>
-          <Col className="pl-0" lg={5}>
+          <Col className="pl-0 " lg={5}>
             {" "}
             <UserInfo user={user} />
           </Col>

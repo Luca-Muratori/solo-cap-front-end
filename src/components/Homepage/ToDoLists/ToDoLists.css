@@ -2,7 +2,7 @@
 #UserToDoList,
 #eventsToDoList {
     background-color: rgba(199,237,230);
-    border:3px solid rgb(75, 179, 160);
+    border:3px solid rgb(182, 227, 218);
     border-radius:1rem
 }
 
@@ -12,7 +12,7 @@
 }
 
 .row1{
-    border-bottom: 2px solid rgba(75, 179, 160);
+    border-bottom: 2px solid rgba(182, 227, 218);
     margin-bottom:15px  ;
    
 }
@@ -31,7 +31,7 @@
 }
 
 .singleToDo{
-    border-bottom: 2px solid rgba(75, 179, 160)
+    border-bottom: 2px solid rgba(182, 227, 218)
  }
 
 .singleToDo:last-child{
@@ -132,4 +132,48 @@
 
 .addToYourList:hover{
     cursor: pointer;
+}
+
+.toDoListTitle{
+    font-family: Teko, sans-serif;
+    font-weight: 800 ;
+    margin-top: 10px;
+
+}
+
+
+
+
+@media (max-width:412px){
+    .userPicToDo {
+        width:30%
+    }
+
+    .toDoBody{
+        width:50%
+    }
+    
+    .addIconToDoResponsiveness{
+        width:20%
+    }
+
+    .friendToDoInfo img{
+        width:50px;
+        height:50px;
+    }
+
+    .toDoListTitle{
+        margin-left:70px
+    }
+
+    #addToDoUser{
+        margin-left:6rem!important
+    }
+
+    .postComponent{
+        max-width: 100%;
+    }
+
+
+   
 }

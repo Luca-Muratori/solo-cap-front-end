@@ -42,3 +42,41 @@
 .inputSearchNav{
     border-radius:1rem
 }
+
+.navbar-light .navbar-toggler{
+    border-color:none !important
+}
+
+
+@media (max-width:412px){
+   .navBar{ width:100%}
+
+   #logoutIcon{
+    width:100%!important
+   }
+
+   #avatarImg{
+    padding-left:0px!important;
+    padding-right:0px!important;
+    width: 365px;
+    max-width: 0;
+   }
+
+   #avatarPlusLogout{
+    width:115px!important;
+    justify-content:space-between
+   }
+
+   #basic-navbar-nav{
+    background-color: white;
+    border-radius:1rem;
+    display:flex;
+    justify-content:space-between
+
+   }
+
+   .searchQuery{
+    width:100%!important
+   }
+ 
+}

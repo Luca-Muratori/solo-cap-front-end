@@ -1,0 +1,10 @@
+
+@media (max-width:412px){
+    .homepage{
+        padding-inline:0rem!important
+}}
+
+.homepage{
+    padding-inline: "6rem"
+}
+

@@ -63,14 +63,17 @@ const NavbarComponent = () => {
       <Navbar expand="lg" className="navBar d-flex justify-content-between">
         <Navbar.Brand href="/home">
           <img
-            style={{ width: "40%" }}
+            style={{ maxWidth: "30%" }}
             alt="logo"
             src="https://img.icons8.com/clouds/100/000000/globe--v2.png"
           />
           TravelEasy
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse className="nav justify-content-end">
+        <Navbar.Toggle
+          style={{ backgroundColor: "white" }}
+          aria-controls="basic-navbar-nav"
+        />
+        <Navbar.Collapse id="basic-navbar-nav">
           <Form>
             <FormControl
               type="text"
@@ -118,7 +121,10 @@ const NavbarComponent = () => {
               <></>
             )}
           </Form>
-          <div style={{ display: "flex", alignItems: "center", width: "20%" }}>
+          <div
+            id="avatarPlusLogout"
+            style={{ display: "flex", alignItems: "center", width: "20%" }}
+          >
             <Nav.Link
               href="/myProfile"
               id="avatarImg"
@@ -146,6 +152,7 @@ const NavbarComponent = () => {
                 style={{ paddingLeft: "0px" }}
               >
                 <img
+                  id="logoutIcon"
                   style={{ width: "50%" }}
                   alt="logout"
                   src="https://img.icons8.com/clouds/100/000000/exit.png"

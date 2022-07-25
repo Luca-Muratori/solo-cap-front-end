@@ -30,16 +30,7 @@ const UserToDoList = () => {
   return (
     <div id="UserToDoList">
       <div id="userToDoListHeader">
-        <div
-          className=""
-          style={{
-            fontFamily: "Teko, sans-serif",
-            fontWeight: "800",
-            marginTop: "10px",
-          }}
-        >
-          My to do list
-        </div>{" "}
+        <div className="toDoListTitle">My to do list</div>{" "}
         <div id="userToDoAddIcon">
           <UserToDoListAddButton user={me} />
           <span className="tooltipAddIcon">
