@@ -58,7 +58,7 @@ const UserProfile = () => {
               <div id="photoTitle">Look at your photo</div>
               <div className="tooltipMyProfile">
                 <img
-                  src="https://img.icons8.com/cute-clipart/64/000000/add-image.png"
+                  src="https://img.icons8.com/sf-regular-filled/48/000000/add-image.png"
                   alt="add"
                   onClick={handleShow}
                   className="AddAPhotoIconMyProfile"

@@ -35,6 +35,7 @@ const OtherUserInfo = ({ otherUser }) => {
                 backgroundColor: "#c7ede6",
                 borderRadius: "1rem",
               }}
+              className="otherUserNumberPhotoToDo"
             >
               <div
                 style={{
@@ -46,16 +47,16 @@ const OtherUserInfo = ({ otherUser }) => {
                 }}
               >
                 <div>
-                  <div style={{ fontSize: "25px", marginTop: "10px" }}>
+                  <div style={{ marginTop: "10px" }}>
                     {otherUser.photos?.length}
                   </div>
-                  <div style={{ fontSize: "18px" }}>Photos</div>
+                  <div>Photos</div>
                 </div>
                 <div>
-                  <div style={{ fontSize: "25px", marginTop: "10px" }}>
+                  <div style={{ marginTop: "10px" }}>
                     {otherUser.userToDoList?.length}
                   </div>
-                  <div style={{ fontSize: "18px" }}>To-do</div>
+                  <div>To-do</div>
                 </div>
               </div>
             </div>

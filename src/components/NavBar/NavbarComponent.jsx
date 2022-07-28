@@ -69,10 +69,31 @@ const NavbarComponent = () => {
           />
           TravelEasy
         </Navbar.Brand>
-        <Navbar.Toggle
-          style={{ backgroundColor: "white" }}
-          aria-controls="basic-navbar-nav"
-        />
+        <Navbar.Toggle style={{ backgroundColor: "white" }} />
+        <div style={{ display: "flex" }}>
+          {" "}
+          <img
+            id="userAvatarNav"
+            alt="user"
+            style={{
+              maxWidth: "80%",
+              borderRadius: "2rem",
+              height: "37px",
+            }}
+            src={user.avatar}
+          />
+          <NavDropdown id="basic-nav-dropdown">
+            <NavDropdown.Item href="/myProfile">View Profile</NavDropdown.Item>
+            {userLogin ? (
+              <NavDropdown.Item onClick={handleLogout} href="/">
+                Logout
+              </NavDropdown.Item>
+            ) : (
+              ""
+            )}
+          </NavDropdown>
+        </div>
+
         <Navbar.Collapse id="basic-navbar-nav">
           <Form>
             <FormControl
@@ -102,6 +123,7 @@ const NavbarComponent = () => {
                           xs={10}
                           sm={10}
                           lg={10}
+                          className="searchResultEmail"
                           style={{ marginTop: "1rem", paddingLeft: "0px" }}
                         >
                           <a
@@ -124,44 +146,7 @@ const NavbarComponent = () => {
           <div
             id="avatarPlusLogout"
             style={{ display: "flex", alignItems: "center", width: "20%" }}
-          >
-            <Nav.Link
-              href="/myProfile"
-              id="avatarImg"
-              style={{
-                textAlign: "end",
-                paddingLeft: "1.5rem",
-                paddingRight: ".5rem",
-                maxWidth: "40%",
-              }}
-            >
-              <img
-                alt="user"
-                style={{
-                  maxWidth: "80%",
-                  borderRadius: "2rem",
-                  height: "37px",
-                }}
-                src={user.avatar}
-              />
-            </Nav.Link>
-            {userLogin ? (
-              <Nav.Link
-                onClick={handleLogout}
-                href="/"
-                style={{ paddingLeft: "0px" }}
-              >
-                <img
-                  id="logoutIcon"
-                  style={{ width: "50%" }}
-                  alt="logout"
-                  src="https://img.icons8.com/clouds/100/000000/exit.png"
-                />
-              </Nav.Link>
-            ) : (
-              ""
-            )}
-          </div>
+          ></div>
         </Navbar.Collapse>
       </Navbar>
       <Outlet />

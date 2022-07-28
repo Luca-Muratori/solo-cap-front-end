@@ -37,13 +37,11 @@ const UserInfo = ({ user }) => {
               }}
             >
               <div>
-                <div style={{ fontSize: "25px" }}>{user.photos.length}</div>
+                <div>{user.photos.length}</div>
                 <div>Photos</div>
               </div>
               <div style={{ marginLeft: "10px" }}>
-                <div style={{ fontSize: "25px" }}>
-                  {user.userToDoList.length}
-                </div>
+                <div>{user.userToDoList.length}</div>
                 <div>To-do</div>
               </div>
             </div>
@@ -82,7 +80,6 @@ const UserInfo = ({ user }) => {
           </div>
         </div>
       )}
-      {/* <div>Friends: {user.friends.length}</div> */}
     </div>
   );
 };

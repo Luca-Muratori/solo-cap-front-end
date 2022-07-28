@@ -226,7 +226,8 @@
    }
 
    #otherUserInfoContainer{
-    padding-left:15px!important
+    padding-left:15px!important;
+    font-size:15px!important
    }
 
    .containerOtherUserToDoPhoto{
@@ -235,7 +236,7 @@
    }
 
    #UserToDoList{
-    width:96%!important
+    width:100%!important
    }
 
    #photoComponentOtherUser{
@@ -247,6 +248,57 @@
     margin-left:10px
    }
 
+
+   #profilePicUser img{
+    width:140px;
+    height:140px;
+    margin-left:100px
+   }
+
+   .userInfo div{
+    text-align: center;
+   }
+
+   #userModifyInfoIcon{
+    margin-left:0px!important;
+    width:40px!important;
+    height:40px!important;
+   }
+
+   #userInfoContainer div{
+    font-size:14px!important
+   }
+
+   .otherUserAvatar img{
+    width: 140px !important;
+    height: 140px!important;
+    margin-left:100px
+   }
+
+   .otherUserInfo{
+    margin-left:33px
+   }
+
+   .otherUserNumberPhotoToDo{
+    height: 55px !important
+   }
+
+   #UserToDoList.otherUserToDoList{
+    width: 96% !important
+   }
+
+   .SinglePhotoComponent img{
+        width: 95% !important;
+        margin-left:14px
+   }
+
+   #photoComponentOtherUser div{
+    justify-content:center
+   }
+
+   .navbar-toggler{
+padding-left:4.75rem
+   }
   
 }
 

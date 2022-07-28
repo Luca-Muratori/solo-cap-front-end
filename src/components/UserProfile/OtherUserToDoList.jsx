@@ -21,7 +21,7 @@ const OtherUserToDoList = ({ user }) => {
     }
   };
   return (
-    <div id="UserToDoList">
+    <div id="UserToDoList" className="otherUserToDoList">
       <div
         style={{
           textAlign: "center",

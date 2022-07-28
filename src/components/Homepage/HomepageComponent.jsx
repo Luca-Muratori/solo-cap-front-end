@@ -1,5 +1,15 @@
 import React, { useEffect } from "react";
-import { Container, Col, Row } from "react-bootstrap";
+import {
+  Container,
+  Col,
+  Row,
+  Navbar,
+  Nav,
+  NavDropdown,
+  Form,
+  FormControl,
+  Button,
+} from "react-bootstrap";
 import { useSearchParams } from "react-router-dom";
 import MainComponent from "./MainComponent/MainComponent";
 import ToDoListComponent from "./ToDoLists/ToDoListComponent";
@@ -32,7 +42,7 @@ const HomepageComponent = () => {
             <MainComponent />
           </Col>
         </Row>
-      </Container>
+      </Container>{" "}
     </>
   );
 };

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Button, Modal, Form } from "react-bootstrap";
-import { BsJournalPlus } from "react-icons/bs";
+import { BsFillPlusCircleFill } from "react-icons/bs";
 
 const UserToDoListAddButton = ({ user }) => {
   const [show, setShow] = useState(false);
@@ -40,7 +40,7 @@ const UserToDoListAddButton = ({ user }) => {
   return (
     <>
       <div id="addToDoUser" onClick={handleShow}>
-        <BsJournalPlus />
+        <BsFillPlusCircleFill />
       </div>
 
       <Modal style={{ marginTop: "52px" }} show={show} onHide={handleClose}>

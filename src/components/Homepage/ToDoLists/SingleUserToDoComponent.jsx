@@ -21,7 +21,7 @@ const SingleUserToDoComponent = ({ toDo, user }) => {
     <div key={toDo._id} className="checkBoxUserToDoList">
       <Form.Check
         type="checkbox"
-        style={{ paddingLeft: "25px" }}
+        style={{ paddingLeft: "19px" }}
         onClick={handleDelete}
       />
       <div className="activityInfo">
