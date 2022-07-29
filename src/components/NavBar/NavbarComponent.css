@@ -36,8 +36,8 @@
 }
 
 .avatarSearchQuery{
-    width: 100%;
-    height: 70%;
+    width: 45px;
+    height:45px;
     margin-top:1rem;
     border-radius:50%;
     margin-left:.5rem;
@@ -57,12 +57,24 @@
     border-color:none !important
 }
 
+#basic-nav-dropdown{
+    padding-left: 0px;
+}
+
+.avatarImgNavBar{
+    margin-left:700px
+}
+
 
 @media (max-width:412px){
     body{
         line-height:1.3!important;
     }
    .navBar{ width:100%}
+
+   .avatarImgNavBar{
+    margin-left:0px!important
+   }
 
    #logoutIcon{
     width:100%!important

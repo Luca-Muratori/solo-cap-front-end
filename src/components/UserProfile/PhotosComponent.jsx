@@ -37,11 +37,7 @@ const PhotosComponent = ({ user }) => {
         {photos &&
           photos.map((photo) => {
             return (
-              <Col
-                sm={12}
-                className="p-0 pr-2 "
-                style={{ width: "100%", height: "100%" }}
-              >
+              <Col sm={12} className="p-0 pr-2 ">
                 <SinglePhotoComponent
                   key={photo._id}
                   cloudinaryLink={photo.cloudinaryLink}

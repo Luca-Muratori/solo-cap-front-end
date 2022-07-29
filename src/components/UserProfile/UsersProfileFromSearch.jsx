@@ -51,6 +51,7 @@ const UsersProfileFromSearch = () => {
                 backgroundColor: "white",
                 maxWidth: "70% ",
                 borderRadius: "1rem",
+                paddingLeft: "10px",
               }}
             >
               <div className="d-flex ">

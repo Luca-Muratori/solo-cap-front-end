@@ -16,7 +16,11 @@ const OtherUserInfo = ({ otherUser }) => {
             lg={3}
             sm={12}
             className="pr-0 otherUserAvatar"
-            style={{ maxWidth: "20%" }}
+            style={{
+              maxWidth: "20%",
+              display: "flex",
+              justifyContent: "center",
+            }}
           >
             <img
               style={{ borderRadius: "50%", width: "70%", height: "100%" }}
@@ -34,6 +38,7 @@ const OtherUserInfo = ({ otherUser }) => {
                 height: "87px",
                 backgroundColor: "#c7ede6",
                 borderRadius: "1rem",
+                marginLeft: "52px",
               }}
               className="otherUserNumberPhotoToDo"
             >
@@ -44,6 +49,7 @@ const OtherUserInfo = ({ otherUser }) => {
                   width: "100%",
                   flexDirection: "row",
                   justifyContent: "space-evenly",
+                  fontSize: "18px",
                 }}
               >
                 <div>

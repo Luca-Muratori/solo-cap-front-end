@@ -70,24 +70,28 @@ const NavbarComponent = () => {
           TravelEasy
         </Navbar.Brand>
         <Navbar.Toggle style={{ backgroundColor: "white" }} />
-        <div style={{ display: "flex" }}>
+        <div className="avatarImgNavBar" style={{ display: "flex" }}>
           {" "}
           <img
             id="userAvatarNav"
             alt="user"
             style={{
-              maxWidth: "80%",
+              width: "37px",
               borderRadius: "2rem",
               height: "37px",
             }}
             src={user.avatar}
           />
           <NavDropdown id="basic-nav-dropdown">
-            <NavDropdown.Item href="/myProfile">View Profile</NavDropdown.Item>
             {userLogin ? (
-              <NavDropdown.Item onClick={handleLogout} href="/">
-                Logout
-              </NavDropdown.Item>
+              <>
+                <NavDropdown.Item href="/myProfile">
+                  View Profile
+                </NavDropdown.Item>
+                <NavDropdown.Item onClick={handleLogout} href="/">
+                  Logout
+                </NavDropdown.Item>
+              </>
             ) : (
               ""
             )}

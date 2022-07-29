@@ -36,9 +36,18 @@ const UserProfilePic = ({ user }) => {
     <div className="profilePics">
       <Container id="profilePicUser">
         <Row id="profileNumberPhotoTodo">
-          <Col className="pr-0" lg={3} id="">
+          <Col
+            className="pr-0 avatarResponsiveness"
+            lg={3}
+            style={{ display: "flex", justifyContent: "center" }}
+          >
             {" "}
             <img
+              style={{
+                width: "160px",
+                height: "160px",
+                objectFit: "cover",
+              }}
               alt="user"
               className="avatarProfileMe"
               onClick={handleShow}
