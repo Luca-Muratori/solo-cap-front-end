@@ -65,6 +65,10 @@
     margin-left:700px
 }
 
+.mr-sm-2{
+    border:2px solid #c6ece5!important
+}
+
 
 @media (max-width:412px){
     body{

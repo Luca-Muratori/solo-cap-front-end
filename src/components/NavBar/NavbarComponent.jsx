@@ -102,7 +102,9 @@ const NavbarComponent = () => {
           <Form>
             <FormControl
               type="text"
-              style={{ borderRadius: ".7rem" }}
+              style={{
+                borderRadius: ".7rem",
+              }}
               placeholder="Search"
               className="mr-sm-2"
               onChange={(e) => setQuery(e.target.value)}
