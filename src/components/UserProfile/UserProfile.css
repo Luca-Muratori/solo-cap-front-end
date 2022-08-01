@@ -274,7 +274,7 @@
    .otherUserAvatar img{
     width: 140px !important;
     height: 140px!important;
-    margin-left:100px
+    margin-left:0px
    }
 
    .otherUserInfo{
@@ -282,7 +282,8 @@
    }
 
    .otherUserNumberPhotoToDo{
-    height: 55px !important
+    height: 55px !important;
+    margin-left:0px!important
    }
 
    #UserToDoList.otherUserToDoList{
