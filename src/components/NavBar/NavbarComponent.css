@@ -94,9 +94,6 @@
 
    #basic-navbar-nav{
     border-radius:1rem;
-    display:flex;
-    justify-content:space-between
-
    }
 
    .searchQuery{
