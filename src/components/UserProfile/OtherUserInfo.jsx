@@ -20,11 +20,15 @@ const OtherUserInfo = ({ otherUser }) => {
               maxWidth: "20%",
               display: "flex",
               justifyContent: "center",
-              objectFit: "cover",
             }}
           >
             <img
-              style={{ borderRadius: "50%", width: "70%", height: "100%" }}
+              style={{
+                borderRadius: "50%",
+                width: "70%",
+                height: "100%",
+                objectFit: "cover",
+              }}
               alt="user"
               src={otherUser.avatar}
             />
