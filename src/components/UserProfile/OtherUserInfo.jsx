@@ -20,6 +20,7 @@ const OtherUserInfo = ({ otherUser }) => {
               maxWidth: "20%",
               display: "flex",
               justifyContent: "center",
+              objectFit: "cover",
             }}
           >
             <img

@@ -49,7 +49,7 @@ const UsersProfileFromSearch = () => {
               id="photoComponentOtherUser"
               style={{
                 backgroundColor: "white",
-                maxWidth: "70% ",
+                maxWidth: "100% ",
                 borderRadius: "1rem",
                 paddingLeft: "10px",
               }}
