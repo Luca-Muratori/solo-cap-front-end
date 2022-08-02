@@ -79,6 +79,7 @@ const NavbarComponent = () => {
               width: "37px",
               borderRadius: "2rem",
               height: "37px",
+              objectFit: "cover",
             }}
             src={user.avatar}
           />
