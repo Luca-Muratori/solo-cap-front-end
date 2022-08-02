@@ -47,7 +47,7 @@ const LoginComponent = () => {
   return (
     <div>
       <div id="WelcomeLogin">
-        <div id="loginCredentialTitle">Welcome to TravelEasy</div>
+        <div id="loginCredentialTitle">Welcome to TravelExp</div>
         <p style={{ textAlign: "center" }}>
           Add your photo and look what your friends are planning to do{" "}
         </p>

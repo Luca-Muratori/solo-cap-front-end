@@ -67,7 +67,7 @@ const NavbarComponent = () => {
             alt="logo"
             src="https://img.icons8.com/clouds/100/000000/globe--v2.png"
           />
-          TravelEasy
+          TravelExp
         </Navbar.Brand>
         <Navbar.Toggle style={{ backgroundColor: "white" }} />
         <div className="avatarImgNavBar" style={{ display: "flex" }}>
