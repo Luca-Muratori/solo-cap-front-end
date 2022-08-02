@@ -75,7 +75,7 @@ const LoginComponent = () => {
               Log in{" "}
             </Button>
           </Form>
-          <GoogleLogin />
+          {/* <GoogleLogin /> */}
         </div>
       </div>
     </div>
